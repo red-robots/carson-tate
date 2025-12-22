@@ -4,7 +4,7 @@ $color_link_hover: midnightblue;
 $color_text_main: #404040;
 $primary: #191919;
 $secondary: #BA0C2F;
-$gray: #F2F2F2;
+//$gray: #F2F2F2;
 $gray_dark: #707070;
 $slight-gray: #F4F4F4;
 $gray_border: #b5b5b5;
@@ -14,6 +14,17 @@ $blue:#1A72BE;
 $limegreen:#71C943;
 $submenu_color: #191919;
 $teal: #6FA2B6;
+
+$white: #fcfcfc;
+$white_1: #faf7f4;
+$pink: #f4ebe9;
+$gray: #ececec;
+$gray_1: #c1c1c1;
+$black_gray: #2f3030;
+$brown: #ab653c;
+$cream: #ceb8ad;
+$olive_green: #424612;
+$lime: #f0f2d8;
 
 //$font_primary: 'Libre Franklin', sans-serif;
 //$font_secondary: 'Poppins', sans-serif;
@@ -76,7 +87,9 @@ $font-brandon-medium-italic: 'Brandon Medium Italic';
 $font-brandon-bold: 'Brandon Bold';
 $font-brandon-black: 'Brandon Black';
 
-$font_primary: $font-brandon-regular;
+$font-hanken-grotesk: "hanken-grotesk",sans-serif;
+
+$font_primary: $font-hanken-grotesk;
 $font_secondary: 'Lato', sans-serif;
 $font_third: 'Montserrat', sans-serif;
 $font_code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;

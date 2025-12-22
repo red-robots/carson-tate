@@ -5,70 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="<?php bloginfo("template_url") ?>/css/jquery.fancybox.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php bloginfo("template_url") ?>/css/select2.min.css">
-<meta name="facebook-domain-verification" content="vcbl42j06vfl4vocp07qka3fcdtyir" />
-<?php if ( is_singular(array('post')) ) { 
-global $post;
-$post_id = $post->ID;
-$thumbId = get_post_thumbnail_id($post_id); 
-$featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
-<!-- SOCIAL MEDIA META TAGS -->
-
-
-<meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
-<meta property="og:url"		content="<?php echo get_permalink(); ?>" />
-<meta property="og:type"	content="article" />
-<meta property="og:title"	content="<?php echo get_the_title(); ?>" />
-<meta property="og:description"	content="<?php echo (get_the_excerpt()) ? strip_tags(get_the_excerpt()):''; ?>" />
-<?php if ($featImg) { ?>
-<meta property="og:image"	content="<?php echo $featImg[0] ?>" />
-<?php } ?>
-<!-- end of SOCIAL MEDIA META TAGS -->
-<?php } ?>
-<script src="https://kit.fontawesome.com/df142d44cc.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/svo2src.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script> 
+
+<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url'); ?>/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url'); ?>/images/favicon-16x16.png">
+<link rel="manifest" href="<?php bloginfo('template_url'); ?>/images/site.webmanifest">
+<link rel="stylesheet" href=https://use.typekit.net/zzb0tjr.css>
+
+<!-- Meta Pixel Code -->
 <script>
-var currentURL = '<?php echo get_permalink();?>';
-var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '236370623380911');
+fbq('track', 'PageView');
 </script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script>!function(e,t,n,s,a,c,p,i,o,u){e[a]||((i=e[a]=function(){i.process?i.process.apply(i,arguments):i.queue.push(arguments)}).queue=[],i.pixelId="cbd42ac9-c947-41a0-a340-cc2163106c8c",i.t=1*new Date,(o=t.createElement(n)).async=1,o.src="https://found.ee/dmp/pixel.js?t="+864e5*Math.ceil(new Date/864e5),(u=t.getElementsByTagName(n)[0]).parentNode.insertBefore(o,u))}(window,document,"script",0,"foundee");foundee('', 'Y');</script>               
 <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
+<div id="overlay"></div>
+<div id="popup-content"></div>
 
 <div id="page" class="site cf">
-	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
-
-	<header id="masthead" class="site-header start-position" role="banner">
-    <div class="wrapper">
-      <div class="header-inner">
-        <?php if ( has_custom_logo() ) { ?>
-          <span class="site-logo"><?php the_custom_logo(); ?></span>
-        <?php } ?>
-
-        <button id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></button>
-
-        <?php if ( has_nav_menu( 'primary' ) ) { ?>
-  		  <nav id="site-navigation" class="main-navigation" role="navigation">
-          <?php
-            wp_nav_menu(
-              array(
-                'theme_location'  => 'primary',
-                'menu_class'      => 'menu-wrapper',
-                'container_class' => 'primary-menu-container',
-                'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
-                'fallback_cb'     => false,
-              )
-            );
-          ?>
-        </nav>
-        <?php } ?>
-        
-  		</div>
-    </div>
+	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>	
+  <header id="masthead" class="site-header site-header-new" role="banner">
+		<div class="wrapper header-flex">
+        <div id="site-logo" class="logo logo-center">
+          <a href="<?php bloginfo('url'); ?>">
+           <img src="<?php bloginfo('template_url'); ?>/images/logo.svg">
+          </a>
+        </div>
+  			<nav id="site-navigation" class="main-navigation desktop-navigation full-width-dropdown" role="navigation">
+  				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class'=>'primary-menu-wrap','link_before'=>'<span><b>','link_after'=>'</b></span>' ) ); ?>
+  			</nav>
+		</div><!-- wrapper -->
 	</header><!-- #masthead -->
+
+  <span id="mobile-menu-toggle" class="main-menu"><span class="bar"><span></span></span></span>
+  <div class="mobile-navigation navigation-forall"></div>
 
 	<div id="content" class="site-content">

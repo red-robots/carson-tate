@@ -59,7 +59,6 @@ function js_custom_init() {
                     'menu_name' => $menu_name
                 );
             
-            
                 $args = array(
                     'labels' => $labels,
                     'public' => true,
@@ -78,280 +77,71 @@ function js_custom_init() {
                 ); 
                 
                 register_post_type($p_type,$args); // name used in query
-                
             }
             
         }
     }
 }
 
-
-
 /* ##########################################################
  * Add new taxonomy, make it hierarchical (like categories)
  * Custom Taxonomies
 */
-add_action( 'init', 'build_taxonomies', 0 ); 
-function build_taxonomies() {
+// add_action( 'init', 'build_taxonomies', 0 ); 
+// function build_taxonomies() {
+  // $post_types = array(
+  //   array(
+  //   // array(
+  //   //   'post_type' => array('jam-programs'),
+  //   //   'menu_name' => 'Programming',
+  //   //   'plural'    => 'Programming',
+  //   //   'single'    => 'Programming',
+  //   //   'taxonomy'  => 'riverjam-programming',
+  //   //   'rewrite'   => 'riverjam-programming'
+  //   // ),
+  //   )
+  // );
 
-  $post_types = array(
-    array(
-      'post_type' => array('music'),
-      'menu_name' => 'Location',
-      'plural'    => 'Location',
-      'single'    => 'Location',
-      'taxonomy'  => 'event-location'
-    ),
-    array(
-      'post_type' => array('activity', 'pass'),
-      'menu_name' => 'Pass Type',
-      'plural'    => 'Pass Types',
-      'single'    => 'Pass Type',
-      'taxonomy'  => 'pass_type',
-      'rewrite'   => 'pass-type'
-    ),
-    array(
-      'post_type' => array('film', 'activity','post','race'),
-      'menu_name' => 'Activity',
-      'plural'    => 'Activities',
-      'single'    => 'Activity',
-      'taxonomy'  => 'activity_type',
-      'rewrite'   => 'activity-type',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('race'),
-      'menu_name' => 'Location',
-      'plural'    => 'Locations',
-      'single'    => 'Location',
-      'taxonomy'  => 'activity_location',
-      'rewrite'   => 'activity-location',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('activity'),
-      'menu_name' => 'Activity Medium',
-      'plural'    => 'Activities',
-      'single'    => 'Activity',
-      'taxonomy'  => 'activity_medium',
-      'rewrite'   => 'activity-medium',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('faqs'),
-      'menu_name' => 'FAQ Type',
-      'plural'    => 'FAQ Types',
-      'single'    => 'FAQ Type',
-      'taxonomy'  => 'faq_type',
-      'rewrite'   => 'faq-type'
-    ),
-    array(
-      'post_type' => array('festival_activity'),
-      'menu_name' => 'Programming',
-      'plural'    => 'Programming',
-      'single'    => 'Programming',
-      'taxonomy'  => 'festival_programming',
-      'rewrite'   => 'festival-programming'
-    ),
-    array(
-      'post_type' => array('festival_activity'),
-      'menu_name' => 'Festival Name',
-      'plural'    => 'Festival Names',
-      'single'    => 'Festival Name',
-      'taxonomy'  => 'festival'
-    ),
-    array(
-      'post_type' => array('festival_activity'),
-      'menu_name' => 'Festival Day',
-      'plural'    => 'Festival Days',
-      'single'    => 'Festival Day',
-      'taxonomy'  => 'festival_day',
-      'rewrite'   => 'festival-day'
-    ),
-    array(
-      'post_type' => array('festival_activity'),
-      'menu_name' => 'Difficulty',
-      'plural'    => 'Difficulty',
-      'single'    => 'Difficulty',
-      'taxonomy'  => 'difficulty',
-      'rewrite'   => 'difficulty'
-    ),
-    array(
-      'post_type' => array('story'),
-      'menu_name' => 'Editions',
-      'plural'    => 'Editions',
-      'single'    => 'Edition',
-      'taxonomy'  => 'edition',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('job'),
-      'menu_name' => 'Job Types',
-      'plural'    => 'Job Types',
-      'single'    => 'Job Type',
-      'taxonomy'  => 'jobtype',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('job'),
-      'menu_name' => 'Job Locations',
-      'plural'    => 'Job Locations',
-      'single'    => 'Job Location',
-      'taxonomy'  => 'joblocation',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('job'),
-      'menu_name' => 'Departments',
-      'plural'    => 'Departments',
-      'single'    => 'Department',
-      'taxonomy'  => 'department',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('instructions'),
-      'menu_name' => 'Instruction Types',
-      'plural'    => 'Instruction Types',
-      'single'    => 'Instruction Type',
-      'taxonomy'  => 'instruction_type',
-      'rewrite'   => 'instruction-type',
-      'query_var' => false,
-      'show_admin_column'=>true
-    ),
-    array(
-      'post_type' => array('instructions'),
-      'menu_name' => 'Lesson Format',
-      'plural'    => 'Lesson Format',
-      'single'    => 'Lesson Format',
-      'taxonomy'  => 'instructions-lesson-format',
-      'query_var' => false,
-      'show_admin_column'=>false
-    ),
-    array(
-      'post_type' => array('instructions'),
-      'menu_name' => 'Experience Level',
-      'plural'    => 'Experience Level',
-      'single'    => 'Experience Level',
-      'taxonomy'  => 'instructions-experience-level',
-      'query_var' => false,
-      'show_admin_column'=>false
-    ),
-    array(
-      'post_type' => array('instructions'),
-      'menu_name' => 'Duration',
-      'plural'    => 'Duration',
-      'single'    => 'Duration',
-      'taxonomy'  => 'instructions-duration',
-      'query_var' => false,
-      'show_admin_column'=>false
-    ),
-    array(
-      'post_type' => array('instructions'),
-      'menu_name' => 'Instructions Template',
-      'plural'    => 'Instructions Templates',
-      'single'    => 'Instructions Template',
-      'taxonomy'  => 'instructions-template',
-      'query_var' => true,
-      'show_admin_column'=>true
-    ),
-    array(
-      'post_type' => array('event-space'),
-      'menu_name' => 'Number of Guests',
-      'plural'    => 'Number of Guest',
-      'single'    => 'Number of Guest',
-      'taxonomy'  => 'number-guest',
-      'query_var' => false,
-      'show_admin_column'=>1
-    ),
-    array(
-      'post_type' => array('event-space'),
-      'menu_name' => 'Venue Size',
-      'plural'    => 'Venue Size',
-      'single'    => 'Venue Size',
-      'taxonomy'  => 'venue-size',
-      'query_var' => false,
-      'show_admin_column'=>1
-    ),
-    array(
-      'post_type' => array('route'),
-      'menu_name' => 'Route Type',
-      'plural'    => 'Route Type',
-      'single'    => 'Route Type',
-      'taxonomy'  => 'route-type',
-      'query_var' => false,
-      'show_admin_column'=>1
-    ),
-    array(
-      'post_type' => array('activity_schedule'),
-      'menu_name' => 'Locations',
-      'plural'    => 'Locations',
-      'single'    => 'Location',
-      'taxonomy'  => 'whitewater-location',
-      'query_var' => false,
-      'show_admin_column'=>1
-    ),
-    array(
-      'post_type' => array('whats-new'),
-      'menu_name' => 'Whats New Category',
-      'plural'    => 'Whats New Category',
-      'single'    => 'Whats New Category',
-      'taxonomy'  => 'whats-new-category',
-      'query_var' => false,
-      'show_admin_column'=>1
-    ),
-    // array(
-    //   'post_type' => array('jam-programs'),
-    //   'menu_name' => 'Programming',
-    //   'plural'    => 'Programming',
-    //   'single'    => 'Programming',
-    //   'taxonomy'  => 'riverjam-programming',
-    //   'rewrite'   => 'riverjam-programming'
-    // ),
-  );
+  // if($post_types) {
+  //   foreach($post_types as $p) {
+  //     $p_type = ( isset($p['post_type']) && $p['post_type'] ) ? $p['post_type'] : ""; 
+  //     $single_name = ( isset($p['single']) && $p['single'] ) ? $p['single'] : "Custom Post"; 
+  //     $plural_name = ( isset($p['plural']) && $p['plural'] ) ? $p['plural'] : "Custom Post"; 
+  //     $menu_name = ( isset($p['menu_name']) && $p['menu_name'] ) ? $p['menu_name'] : $p['plural'];
+  //     $taxonomy = ( isset($p['taxonomy']) && $p['taxonomy'] ) ? $p['taxonomy'] : "";
+  //     $rewrite = ( isset($p['rewrite']) && $p['rewrite'] ) ? $p['rewrite'] : $taxonomy;
+  //     $query_var = ( isset($p['query_var']) && $p['query_var'] ) ? $p['query_var'] : true;
+  //     $show_admin_column = ( isset($p['show_admin_column']) ) ? $p['show_admin_column'] : true;
 
-  if($post_types) {
-    foreach($post_types as $p) {
-      $p_type = ( isset($p['post_type']) && $p['post_type'] ) ? $p['post_type'] : ""; 
-      $single_name = ( isset($p['single']) && $p['single'] ) ? $p['single'] : "Custom Post"; 
-      $plural_name = ( isset($p['plural']) && $p['plural'] ) ? $p['plural'] : "Custom Post"; 
-      $menu_name = ( isset($p['menu_name']) && $p['menu_name'] ) ? $p['menu_name'] : $p['plural'];
-      $taxonomy = ( isset($p['taxonomy']) && $p['taxonomy'] ) ? $p['taxonomy'] : "";
-      $rewrite = ( isset($p['rewrite']) && $p['rewrite'] ) ? $p['rewrite'] : $taxonomy;
-      $query_var = ( isset($p['query_var']) && $p['query_var'] ) ? $p['query_var'] : true;
-      $show_admin_column = ( isset($p['show_admin_column']) ) ? $p['show_admin_column'] : true;
+  //     $labels = array(
+  //       'name' => _x( $menu_name, 'taxonomy general name' ),
+  //       'singular_name' => _x( $single_name, 'taxonomy singular name' ),
+  //       'search_items' =>  __( 'Search ' . $plural_name ),
+  //       'popular_items' => __( 'Popular ' . $plural_name ),
+  //       'all_items' => __( 'All ' . $plural_name ),
+  //       'parent_item' => __( 'Parent ' .  $single_name),
+  //       'parent_item_colon' => __( 'Parent ' . $single_name . ':' ),
+  //       'edit_item' => __( 'Edit ' . $single_name ),
+  //       'update_item' => __( 'Update ' . $single_name ),
+  //       'add_new_item' => __( 'Add New ' . $single_name ),
+  //       'new_item_name' => __( 'New ' . $single_name ),
+  //     );
 
-      $labels = array(
-        'name' => _x( $menu_name, 'taxonomy general name' ),
-        'singular_name' => _x( $single_name, 'taxonomy singular name' ),
-        'search_items' =>  __( 'Search ' . $plural_name ),
-        'popular_items' => __( 'Popular ' . $plural_name ),
-        'all_items' => __( 'All ' . $plural_name ),
-        'parent_item' => __( 'Parent ' .  $single_name),
-        'parent_item_colon' => __( 'Parent ' . $single_name . ':' ),
-        'edit_item' => __( 'Edit ' . $single_name ),
-        'update_item' => __( 'Update ' . $single_name ),
-        'add_new_item' => __( 'Add New ' . $single_name ),
-        'new_item_name' => __( 'New ' . $single_name ),
-      );
+  //     register_taxonomy($taxonomy, $p_type, array(
+  //       'hierarchical' => true,
+  //       'labels' => $labels,
+  //       'show_admin_column' => $show_admin_column,
+  //       'query_var' => $query_var,
+  //       'show_ui' => true,
+  //       'show_in_rest' => true,
+  //       'public' => true,
+  //       '_builtin' => true,
+  //       'rewrite' => array( 'slug' => $rewrite ),
+  //     ));
 
-      register_taxonomy($taxonomy, $p_type, array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_admin_column' => $show_admin_column,
-        'query_var' => $query_var,
-        'show_ui' => true,
-        'show_in_rest' => true,
-        'public' => true,
-        '_builtin' => true,
-        'rewrite' => array( 'slug' => $rewrite ),
-      ));
-
-    }
-  }
-
-}
-
-
+  //   }
+  // }
+//}
 
 // Add the custom columns to the position post type:
 add_filter( 'manage_posts_columns', 'set_custom_cpt_columns' );

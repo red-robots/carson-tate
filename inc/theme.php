@@ -173,33 +173,33 @@ add_action( 'init', 'my_theme_add_editor_styles' );
 /*-------------------------------------
   Change Admin Labels
 ---------------------------------------*/
-function change_post_menu_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Stories';
-    $submenu['edit.php'][5][0] = 'Stories';
-    $submenu['edit.php'][10][0] = 'Add Story';
-    //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
-    //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
-    echo '';
-}
+// function change_post_menu_label() {
+//     global $menu;
+//     global $submenu;
+//     $menu[5][0] = 'Posts';
+//     $submenu['edit.php'][5][0] = 'Posts';
+//     $submenu['edit.php'][10][0] = 'Add Post';
+//     //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
+//     //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
+//     echo '';
+// }
 
-function change_post_object_label() {
-        global $wp_post_types;
-        $labels = &$wp_post_types['post']->labels;
-        $labels->name = 'Stories';
-        $labels->singular_name = 'Story';
-        $labels->add_new = 'Add Story';
-        $labels->add_new_item = 'Add Story';
-        $labels->edit_item = 'Edit Story';
-        $labels->new_item = 'Story';
-        $labels->view_item = 'View Story';
-        $labels->search_items = 'Search Story';
-        $labels->not_found = 'No Story found';
-        $labels->not_found_in_trash = 'No Story found in Trash';
-    }
-add_action( 'init', 'change_post_object_label' );
-add_action( 'admin_menu', 'change_post_menu_label' );
+// function change_post_object_label() {
+//         global $wp_post_types;
+//         $labels = &$wp_post_types['post']->labels;
+//         $labels->name = 'Stories';
+//         $labels->singular_name = 'Story';
+//         $labels->add_new = 'Add Story';
+//         $labels->add_new_item = 'Add Story';
+//         $labels->edit_item = 'Edit Story';
+//         $labels->new_item = 'Story';
+//         $labels->view_item = 'View Story';
+//         $labels->search_items = 'Search Story';
+//         $labels->not_found = 'No Story found';
+//         $labels->not_found_in_trash = 'No Story found in Trash';
+//     }
+// add_action( 'init', 'change_post_object_label' );
+// add_action( 'admin_menu', 'change_post_menu_label' );
 
 /*-------------------------------------
   Add a last and first menu class option
