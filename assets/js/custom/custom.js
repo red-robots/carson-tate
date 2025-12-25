@@ -41,6 +41,13 @@ jQuery(document).ready(function ($) {
 	});
 	/* Mobile Navigation - end */
 
+	  /* FAQS */
+	  $(document).on('click','.faqs .faq-title',function(){
+		$(this).parent().toggleClass('active');
+		$(this).next().slideToggle();
+	  });
+	  /* FAQS end */
+
 var params = {}; location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) { params[k] = v });
 
 $('.inline').colorbox({

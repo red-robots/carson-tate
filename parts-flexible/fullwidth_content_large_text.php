@@ -16,10 +16,10 @@
     #fullwidth_content_repeatable--<?php echo $i ?> h5,
     #fullwidth_content_repeatable--<?php echo $i ?> h6,
     #fullwidth_content_repeatable--<?php echo $i ?> p {
-      color: #2f3030;
+      color: inherit;
     }
   </style>
-  <section id="fullwidth_content_repeatable--<?php echo $i ?>" class="fullwidth_content_repeatable repeatable fullwidth_content_large_text" style="background-color:<?php echo $bgcolor ?>;?>">
+  <section id="fullwidth_content_repeatable--<?php echo $i ?>" class="fullwidth_content_repeatable repeatable fullwidth_content_large_text large-padding" style="background-color:<?php echo $bgcolor ?>;?>">
     <div class="wrapper maxwidth-<?php echo $maxwidth; ?>">
       <div class="textwrap" data-aos="fade-up" style="color:<?php echo $textcolor ?>"><?php echo anti_email_spam($content) ?></div>
       <?php 
@@ -30,7 +30,21 @@
           if($button && $button_text && $button_link) {
         ?>
           <div class="button">
-            <a href="<?php echo $button_link; ?>" target="<?php echo $button_target; ?>" style="background-color:<?php echo $buttonbgcolor ?>; border-color: <?php echo $buttonbordercolor ?>; color:<?php echo $buttontextcolor ?>"><?php echo $button_text; ?> <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="<?php echo $button_link; ?>" target="<?php echo $button_target; ?>" style="background-color:<?php echo $buttonbgcolor ?>; border-color: <?php echo $buttonbordercolor ?>; color:<?php echo $buttontextcolor ?>">
+              <?php echo $button_text; ?>
+              <span class="icon-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                  <g clip-path="url(#clip0_6_575)">
+                    <path d="M1 5.41016H9M9 5.41016L5 1.41016M9 5.41016L5 9.41016" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_6_575">
+                      <rect width="10" height="10" fill="currentcolor" transform="translate(0 0.410156)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+            </a>
           </div>
         <?php } ?>
     </div>

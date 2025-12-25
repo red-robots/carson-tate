@@ -18,14 +18,14 @@ function js_custom_init() {
         //     'supports'  => array('title','editor', 'author')
         // ),
 
-        // array(
-        //     'post_type' => 'job',
-        //     'menu_name' => 'Jobs',
-        //     'plural'    => 'Jobs',
-        //     'single'    => 'Job',
-        //     'menu_icon' => 'dashicons-index-card',
-        //     ''supports'  => array('title','editor','thumbnail','page-attributes','comments','excerpt',),
-        // )
+        array(
+            'post_type' => 'testimonial',
+            'menu_name' => 'Testimonials',
+            'plural'    => 'Testimonials',
+            'single'    => 'Testimonial',
+            'menu_icon' => 'dashicons-index-card',
+            'supports'  => array('title','editor','thumbnail'),
+        )
     );
     
     if($post_types) {

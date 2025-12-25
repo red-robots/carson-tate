@@ -15,15 +15,6 @@
  */
 define('THEMEURI',get_template_directory_uri() . '/');
 
-
-
-function add_author_support_to_posts() {
-   add_post_type_support( 'activity_schedule', 'author' ); 
-}
-add_action( 'init', 'add_author_support_to_posts' );
-
-
-
 // Add custom column for sticky post
 function add_sticky_post_column($columns) {
     $columns['sticky_post'] = 'Sticky Post';
@@ -2604,3 +2595,9 @@ function shortenDayName($day) {
 }
 
 
+/*** Upload SVG Files to Media ***/
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+  }
+add_filter('upload_mimes', 'cc_mime_types');
