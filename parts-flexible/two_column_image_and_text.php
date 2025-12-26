@@ -1,77 +1,85 @@
 <?php if( get_row_layout() == 'two_column_image_and_text' ) { 
   $title = get_sub_field('title');
   $content = get_sub_field('textcontent');
-  $buttons = get_sub_field('buttons');
-  $bgcolor = (get_sub_field('bgcolor')) ? get_sub_field('bgcolor') : '#FFF';
-  $textcolor = (get_sub_field('textcolor')) ? get_sub_field('textcolor') : '#6F6F6F';
-  $link_color = (get_sub_field('link_color')) ? get_sub_field('link_color') : '#6F6F6F';
-  $has_paper_edge = get_sub_field('has_paper_edge');
+  $button = get_sub_field('button');
+  $bgcolor = (get_sub_field('bgcolor')) ? get_sub_field('bgcolor') : '#f4ebe9';
+  $textcolor = (get_sub_field('textcolor')) ? get_sub_field('textcolor') : '#2f3030';
+  $button_text_color = (get_sub_field('button_text_color')) ? get_sub_field('button_text_color') : '#f2eee9';
+  $button_bg_color = (get_sub_field('button_bg_color')) ? get_sub_field('button_bg_color') : '#ab653c';
   $image = get_sub_field('image');
   $image_position = get_sub_field('image_position');
   $column_class = ( ($title || $content) && $image ) ? 'half':'full';
   if($image_position) {
     $column_class .=' image-' . $image_position;
   }
-  $paper_edge = ($has_paper_edge) ? ' has-paper-edge':'';
   if($title || $content || $image) { ?>
-  <div class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> repeatable<?php echo $paper_edge ?>">
+  <section class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> <?php echo $column_class; ?>">
     <style>
       .two_column_image_and_text--<?php echo $i ?> h2,
-      .two_column_image_and_text--<?php echo $i ?> p {color:<?php echo $textcolor ?>;}
-      <?php if ($link_color) { ?>
-        .two_column_image_and_text--<?php echo $i ?> .textcol a:not(.repeatable-btn){color:<?php echo $link_color ?>;}
-      <?php } 
-        if ($has_paper_edge) { ?>
-        .two_column_image_and_text--<?php echo $i ?> .roughEdgePaper{fill:<?php echo $bgcolor ?>!important}
+      .two_column_image_and_text--<?php echo $i ?> p { color:<?php echo $textcolor ?>; }
+      <?php if ($button_text_color) { ?>
+        .two_column_image_and_text--<?php echo $i ?> .button a {
+          color: <?php echo $button_text_color ?>;
+          background-color: <?php echo $button_bg_color ?>;
+          border: 1px solid <?php echo $button_bg_color ?>;
+        }
+        .two_column_image_and_text--<?php echo $i ?> .button a:hover {
+          color: <?php echo $button_bg_color ?>;
+          background-color: <?php echo $button_text_color ?>;
+        }
       <?php } ?>
     </style>
-    <?php if ($has_paper_edge) { ?>
-      <div class="paper-edge"><?php echo get_template_part('parts/paper-edge'); ?></div>
-    <?php } ?>
     <div class="repeatable-inner" style="background-color:<?php echo $bgcolor ?>;color:<?php echo $textcolor ?>">
-      <?php if ($has_paper_edge) { ?>
-        <?php if ($title) { ?>
-        <div class="wrapper">
-          <h2 class="s-title fullwidth"><?php echo $title ?></h2>
-        </div>
-        <?php } ?>
-      <?php } ?>
       <div class="flexwrap <?php echo $column_class ?>">
-        <?php if ( $title || $content ) { ?>
-          <div class="textcol" data-aos="fade-right">
-            <div class="inside">
-              <?php if (!$has_paper_edge) { ?>
-                <?php if ($title) { ?>
-                <h2 class="s-title"><?php echo $title ?></h2>
-                <?php } ?>
-              <?php } ?>
-              <?php if ($content) { ?>
-              <div class="textwrap"><?php echo anti_email_spam($content) ?></div>
-              <?php } ?>
-
-              <?php if ($buttons) { ?>
-              <div class="buttons">
-                <?php foreach ($buttons as $bt) { 
-                  if( $b = $bt['button'] ) {
-                    $btnUrl = $b['url'];
-                    $btnTitle = $b['title'];
-                    $btnTarget = ( isset($b['target']) && $b['target'] ) ? $b['target'] : '_self';
-                    ?>
-                    <a href="<?php echo $btnUrl ?>" target="<?php echo $btnTarget ?>" class="repeatable-btn btn-round"><?php echo $btnTitle ?></a>
-                  <?php } ?>
-                <?php } ?>
-              </div>
-              <?php } ?>
-            </div>
+        <?php if ( $image ) { ?>
+          <div class="imagecol">
+            <div class="image-item">
+              <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
+              <div class="image-overlay"></div>
+          </div>
           </div>
         <?php } ?>
-        <?php if ( $image ) { ?>
-          <div class="imagecol" data-aos="fade-left">
-            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['title'] ?>" />
+        <?php if ( $title || $content ) { ?>
+          <div class="textcol large-padding">
+            <div class="inside">
+              <div class="inside-wrapper">
+                 <h2 class="title"><?php echo $title; ?></h2>
+                 <div class="inside-content">
+                    <?php if ($content) { ?>
+                      <div class="content"><?php echo anti_email_spam($content) ?></div>
+                      <?php                      
+                        $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
+                        $button_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
+                        $button_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
+
+                        if($button && $button_text && $button_link) {
+                      ?>
+                        <div class="button">
+                          <a href="<?php echo $button_link; ?>" target="<?php echo $button_target; ?>">
+                            <?php echo $button_text; ?>
+                            <span class="icon-arrow">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
+                                <g clip-path="url(#clip0_6_575)">
+                                  <path d="M1 5.41016H9M9 5.41016L5 1.41016M9 5.41016L5 9.41016" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_6_575">
+                                    <rect width="10" height="10" fill="currentcolor" transform="translate(0 0.410156)"></rect>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      <?php } ?>
+                    </div>
+                  <?php } ?>
+                </div>
+            </div>
           </div>
         <?php } ?>
       </div>
     </div>
-  </div>
+  </section>
   <?php } ?>
 <?php } ?>

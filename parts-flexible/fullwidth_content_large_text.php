@@ -16,12 +16,22 @@
     #fullwidth_content_repeatable--<?php echo $i ?> h5,
     #fullwidth_content_repeatable--<?php echo $i ?> h6,
     #fullwidth_content_repeatable--<?php echo $i ?> p {
-      color: inherit;
+      color: <?php echo $textcolor ?>;
     }
+    <?php if ($buttontextcolor) { ?>
+      #fullwidth_content_repeatable--<?php echo $i ?> .button a {
+        color: <?php echo $buttontextcolor ?>;
+        border: 1px solid <?php echo $buttonbordercolor; ?>;
+      }
+      #fullwidth_content_repeatable--<?php echo $i ?> .button a:hover {
+        color: <?php echo $buttonbordercolor ?>;
+        border: 1px solid <?php echo $buttontextcolor; ?>;
+      }
+    <?php } ?>
   </style>
   <section id="fullwidth_content_repeatable--<?php echo $i ?>" class="fullwidth_content_repeatable repeatable fullwidth_content_large_text large-padding" style="background-color:<?php echo $bgcolor ?>;?>">
     <div class="wrapper maxwidth-<?php echo $maxwidth; ?>">
-      <div class="textwrap" data-aos="fade-up" style="color:<?php echo $textcolor ?>"><?php echo anti_email_spam($content) ?></div>
+      <div class="textwrap" style="color:<?php echo $textcolor ?>"><?php echo anti_email_spam($content) ?></div>
       <?php 
           $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
           $button_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
@@ -30,7 +40,7 @@
           if($button && $button_text && $button_link) {
         ?>
           <div class="button">
-            <a href="<?php echo $button_link; ?>" target="<?php echo $button_target; ?>" style="background-color:<?php echo $buttonbgcolor ?>; border-color: <?php echo $buttonbordercolor ?>; color:<?php echo $buttontextcolor ?>">
+            <a href="<?php echo $button_link; ?>" target="<?php echo $button_target; ?>">
               <?php echo $button_text; ?>
               <span class="icon-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">

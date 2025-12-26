@@ -17,6 +17,7 @@ $teal: #6FA2B6;
 
 $white: #fcfcfc;
 $white_1: #faf7f4;
+$white_2: #f2eee9;
 $pink: #f4ebe9;
 $pink_border: #dfc0b8;
 $gray: #ececec;
@@ -39,9 +40,15 @@ $lime: #f0f2d8;
 	font-weight: 100;
 	font-style: italic;
 }
-
+@font-face {
+	font-family: 'Canela Text Web Thin';
+	src: url('fonts/CanelaText-Thin-Web.woff2') format('woff2');
+	font-weight: 100;
+	font-style: normal;
+}
 
 $font-hanken-grotesk: "hanken-grotesk",sans-serif;
+$font-canela-100: "Canela Text Web Thin", sans-serif;
 $font-canela-italic-100: "Canela Text Web", sans-serif;
 
 $font_primary: $font-hanken-grotesk;

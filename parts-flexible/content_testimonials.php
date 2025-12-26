@@ -5,7 +5,7 @@
   $bgcolor = (get_sub_field('background_color')) ? get_sub_field('background_color') : '#efe6d5';
   $textcolor = (get_sub_field('text_color')) ? get_sub_field('text_color') : '#2f3030';
   $border_color = (get_sub_field('border_color')) ? get_sub_field('border_color') : '#dfc0b8';
-  if($title || $content || $testimonials) { ?>
+  if($title || $subtitle || $testimonials) { ?>
   <style>
     #fullwidth_content_repeatable--<?php echo $i ?> h1,
     #fullwidth_content_repeatable--<?php echo $i ?> h2,
@@ -22,7 +22,7 @@
       <div class="quote-grid large-padding">
         <?php if ($title) { ?>
           <div class="content-wrapper">
-            <h2 class="title"><?php echo $title ?></h2>
+            <h2 class="title"><?php echo $title; ?></h2>
           </div>
         <?php } ?>
 
@@ -35,27 +35,29 @@
               <div class="quote-list">
                 <?php
                   $i = 1;
-                    foreach ($testimonials as $post) {
-                    setup_postdata($post);
-                    $post_id = $post-> ID;
-                    $thumbnail_id = get_post_thumbnail_id($post_id);
-                    $featImage = wp_get_attachment_image_src($thumbnail_id,'large');
+                  //print_r($testimonials);
 
-                    $position = get_field('position', $post_id);
+                    foreach ($testimonials as $testimonial) {
+                      $testimonial_id = $testimonial->ID;
+                      $title = get_the_title( $testimonial_id );
+                      $content = get_post_field( 'post_content', $testimonial_id );
+                      $thumbnail_id = get_post_thumbnail_id($testimonial_id);
+                      $featImage = wp_get_attachment_image_src($thumbnail_id,'large');
+                      $position = get_field('position', $testimonial_id);
                 ?>
-                    <div class="quote-item">
+                    <div class="quote-item quote-item-<?php echo $i; ?>">
                       <div class="quote-content">
                         <div class="quote-flex">
                           <?php if($thumbnail_id): ?>
-                          <div class="quote-image">
-                            <div class="quote-height"></div>
-                            <img src="<?php echo $featImage[0]; ?>" alt="<?php the_title(); ?>">
-                          </div>
+                            <div class="quote-image">
+                              <div class="quote-height"></div>
+                              <img src="<?php echo $featImage[0]; ?>" alt="<?php echo $title; ?>">
+                            </div>
                           <?php endif; ?>
                           <div class="quote-text">
-                            <?php the_content(); ?>
+                            <?php echo $content; ?>
                             <div class="quote-credit">
-                              <div class="quote-name"><?php the_title(); ?></div>
+                              <div class="quote-name"><?php echo $title; ?></div>
                               <div class="quote-position"><?php echo $position; ?></div>
                             </div>
                           </div>
@@ -64,8 +66,6 @@
                     </div>
                 <?php
                     $i++;
-
-                    wp_reset_postdata();
                   }
                 ?>
               </div>
