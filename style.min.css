@@ -1505,7 +1505,7 @@ body.mobile-menu-open .menu-toggle{opacity:0}
 #banner .slideTopTitle .toptext{font-size:18px;font-weight:300;line-height:1.2}
 #banner.subpageBanner .slideItem img{width:100%;height:auto;float:left}
 #banner.subpageBanner .slideItem img.desktop{display:none}
-.site-content{background-color:#faf7f4;width:100%;margin-top:85px}
+.site-content{background-color:#fcfcfc;width:100%;margin-top:85px}
 .btn-link{color:#ba0d30;display:inline-block;text-decoration:none}
 .textcol .buttonGroup{margin-top:35px}
 .textcol .buttonGroup .buttondiv{margin:0 0 15px !important}
@@ -1589,7 +1589,29 @@ body.subpage h1.page-title{color:#000}
 .btn-border-white{display:inline-block;text-decoration:none;cursor:pointer;border:1px solid #fff;color:#fff;font-size:12px;line-height:1.2;padding:8px 10px}
 .btn-border-white:hover{background:#fff;color:#ba0d30}
 .sectionTitle{font-family:"Canela Text Web",sans-serif;font-size:23px;font-weight:400;line-height:1.3;text-transform:uppercase;letter-spacing:2px;color:#191919;margin:0}
+.title-header{letter-spacing:-0.1875rem;font-size:3rem;line-height:1.1}
+.title-header em{font-family:"Canela Text Web",sans-serif}
 .about-page-template .about-grid{grid-column-gap:0;grid-row-gap:0;grid-template-rows:auto;grid-template-columns:1fr;grid-auto-columns:1fr;display:grid}
+.about-page-template .about-grid .about-image{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;height:100%;max-height:130vh;position:sticky;top:94px;overflow:hidden;aspect-ratio:1;min-height:80vw;top:0}
+.about-page-template .about-grid .about-image img{-o-object-fit:cover;object-fit:cover;-o-object-position:50% 0;object-position:50% 0;width:100%;height:101%;position:absolute;inset:0}
+.about-page-template .about-grid .about-image .image-overlay{z-index:3;background-color:#1313131a;position:absolute;inset:0}
+.about-page-template .about-grid .about-content{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
+.about-page-template .about-grid .about-content .about-title em,.about-page-template .about-grid .about-content .about-title strong{font-family:"Canela Text Web",sans-serif;color:#ab653c}
+.about-page-template .about-grid .about-content .about-text{grid-column-gap:1.5rem;grid-row-gap:1.5rem;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;max-width:40rem;display:-webkit-box;display:-ms-flexbox;display:flex}
+.about-page-template .about-grid .about-content .about-text p{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:2rem;-moz-column-gap:2rem;column-gap:2rem;font-size:1rem}
+.about-page-template .about-grid .about-numbers{border-top:1px solid #ececec;grid-column-gap:0;grid-row-gap:0;grid-template-rows:auto auto;grid-template-columns:1fr 1fr;grid-auto-columns:1fr;display:grid}
+.about-page-template .about-grid .about-numbers .number-item{z-index:100;width:100%;padding-left:4rem;padding-right:4rem;position:relative;border-right:1px solid #ececec;border-bottom:1px solid #ececec}
+.about-page-template .about-grid .about-numbers .number-content{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:3rem;padding-bottom:3rem;display:-webkit-box;display:-ms-flexbox;display:flex}
+.about-page-template .about-grid .about-numbers .number-flex{grid-column-gap:.5rem;grid-row-gap:.5rem;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex}
+.about-page-template .about-grid .about-numbers .number-heading{letter-spacing:-0.1875rem;font-size:4.5rem;font-family:"Canela Text Web Thin",sans-serif;line-height:1.1}
+.about-page-template .about-grid .about-numbers .embed-icon{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:1.5rem;height:1.5rem;display:-webkit-box;display:-ms-flexbox;display:flex}
+.about-page-template .about-grid .about-numbers .number-text{padding-top:1.2rem;margin-bottom:0;font-size:.875rem;font-weight:400;opacity:.8}
+.about-page-template .subtitle{grid-column-gap:.625rem;grid-row-gap:.625rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-bottom:1.25rem;display:-webkit-box;display:-ms-flexbox;display:flex}
+.about-page-template .subtitle .arrow-down{width:.625rem}
+.about-page-template .subtitle-text{margin-bottom:0;font-size:.875rem;font-weight:400}
+.about-page-template .more-image figure{text-align:center;clear:both;width:100%;max-width:100%;margin-left:auto;margin-right:auto;display:block;position:relative;margin-bottom:10px}
+.about-page-template .button a{color:#fcfcfc;background-color:#ab653c;border:1px solid #ab653c}
+.about-page-template .button a:hover{color:#ab653c;background-color:#fcfcfc}
 #section-whattowear{padding-top:80px;padding-bottom:80px;background:#ececec}
 #section-whattowear .model,#section-whattowear .options{width:100%;float:left;position:relative}
 #section-whattowear.half .model img.model-image{width:100%;height:auto}
@@ -3650,9 +3672,6 @@ body.home .homerow .imagebox a:hover:before,body.home .homerow .imagebox a:focus
 .tribe-events-calendar-month .tribe-events-calendar-month__day .hentry:not([data-child-series]),.tribe-events-calendar-month .tribe-events-calendar-month__day .hentry[data-child-series],.tribe-events-calendar-month .tribe-events-calendar-month__day .hentry[data-isparent=true]{opacity:1;background:#cd0d0d;color:#fff !important;font-weight:bold;border-radius:100px}
 .tribe-events-calendar-month .tribe-events-calendar-month__day .hentry:not([data-child-series]) h3 span,.tribe-events-calendar-month .tribe-events-calendar-month__day .hentry:not([data-child-series]) h3 a,.tribe-events-calendar-month .tribe-events-calendar-month__day .hentry[data-child-series] h3 span,.tribe-events-calendar-month .tribe-events-calendar-month__day .hentry[data-child-series] h3 a,.tribe-events-calendar-month .tribe-events-calendar-month__day .hentry[data-isparent=true] h3 span,.tribe-events-calendar-month .tribe-events-calendar-month__day .hentry[data-isparent=true] h3 a{color:#fff !important;font-weight:bold;text-transform:uppercase}
 .tribe-events-calendar-month .tribe-events-calendar-month__day .hentry[data-isparent=true]{z-index:10}
-body.subpage .site-header.start-position{position:relative !important;z-index:999999}
-body.subpage nav.new-nav .menu-item a,body.subpage .site-header .navbar .right .cal a,body.subpage .site-header .navbar .right .today{color:#000 !important}
-.film-event-status{top:75px}
 .button-element{display:inline-block;text-decoration:none;background-color:#ba0d30;color:#fff;padding:10px 25px;border-radius:8px;font-size:23px;font-weight:500;line-height:1.2;-webkit-transition:all ease .3s;transition:all ease .3s}
 .button-element:hover,.button-element:focus{color:#fff !important;background-color:#191919;text-decoration:none !important}
 body.subpage.single.single-activity .content-default.new-layout .main-description p{color:#707070;max-width:600px;width:100%;margin:0 auto 20px;font-size:20px;line-height:1.4}
@@ -4261,6 +4280,8 @@ section.homepage-hero .home-info .branding{width:300px}
 .footer-disclaimer{width:400px;padding:40px 0}
 .text-centered-section{padding-top:20px;padding-bottom:80px}
 .text-centered-section.dark{padding-top:80px;padding-bottom:80px}
+.title-header{font-size:4rem}
+.about-page-template .about-grid .about-image{-o-object-fit:fill;object-fit:fill;min-height:70vh;position:relative;top:0;aspect-ratio:auto}
 #section-whattowear.half .model{padding-right:10vw;width:100%}
 #section-whattowear.half .options{width:65%}
 #section-checkin.section-content .col-left,#section-checkin.section-content .col-right{width:50%}
@@ -4629,19 +4650,15 @@ section.teasers section.small-cards .small-card{width:24%;-ms-flex-preferred-siz
 section.teasers .video-wrapper{width:60%}
 section.teasers .fullwidth-image .fullwidth-image__text h3{opacity:1}
 section.teasers .fullwidth-image .fullwidth-image__text h3.mobile{display:none}
-body.subpage .site-header{background:#fff;height:75px;position:fixed;top:0;left:0;z-index:99999;-webkit-transform:none;transform:none}
-body.subpage .site-header .navbar{position:fixed;top:0;left:0;width:100%}
-body.subpage .site-header .navbar .logo img{-webkit-filter:invert(1);filter:invert(1)}
-body.subpage .site-content{padding-top:20px}
-body.logged-in.admin-bar.subpage .site-header{top:0 !important}
-body.logged-in.admin-bar.subpage .site-header .navbar{top:32px !important;background-color:#fff}
-body.logged-in.admin-bar.subpage .film-event-status{top:105px}
 }@media screen and (min-width:901px){.section-fullwidth-black .column1{padding-right:15px}
 .section-fullwidth-black .column2{padding-left:15px}
 }@media(min-width:960px){.large-padding{padding:6rem 4rem}
 .large-padding-top{padding-top:9.5rem}
 #banner .wrapper .banner-container h1{font-size:6rem}
 .about-page-template .about-grid{grid-template-columns:1fr 1fr}
+.about-page-template .about-grid-full{grid-template-columns:1fr}
+.about-page-template .about-grid .about-image{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;position:sticky;top:94px}
+.about-page-template .about-grid .about-image img{-o-object-position:50% 50%;object-position:50% 50%}
 .schedule-activities-info.new-layout .activities .activity-info{margin-bottom:8vh;padding-bottom:8vh}
 .post-type-race .race-types.multi-col .type{width:25%}
 .section-text-and-image.half .leftcol{width:35%}
@@ -4707,6 +4724,7 @@ section.homepage-hero .home-info{-webkit-box-orient:horizontal;-webkit-box-direc
 section.homepage-hero .home-info .info{width:50%;text-align:left}
 section.homepage-hero .home-info .info h1{font-size:60px;line-height:.8}
 section.homepage-hero .home-info .branding{width:300px;margin:0}
+.title-header{font-size:5rem}
 #section-awards .col-content.col-count-2 .result-data{width:50%;margin-top:0}
 .team-staff-section .photo{width:25%}
 .team-staff-section .bio{width:75%}
