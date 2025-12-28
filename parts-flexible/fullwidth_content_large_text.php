@@ -5,7 +5,7 @@
   $button = get_sub_field('button');
   $buttontextcolor = (get_sub_field('button_text_color')) ? get_sub_field('button_text_color') : '#2f3030';
   $buttonbordercolor = (get_sub_field('button_border_color')) ? get_sub_field('button_border_color') : '#c1c1c1';
-  $buttonbgcolor = (get_sub_field('button_bg_color')) ? get_sub_field('button_bg_color') : '#fcfcfc';
+  $buttonbgcolor = (get_sub_field('button_bg_color')) ? get_sub_field('button_bg_color') : 'transparent';
   $maxwidth = (get_sub_field('max_width')) ? get_sub_field('max_width') : '55';
   if($content) { ?>
   <style>
@@ -18,14 +18,15 @@
     #fullwidth_content_repeatable--<?php echo $i ?> p {
       color: <?php echo $textcolor ?>;
     }
-    <?php if ($buttontextcolor) { ?>
+    <?php if ($button) { ?>
       #fullwidth_content_repeatable--<?php echo $i ?> .button a {
+        background-color: <?php echo $buttonbgcolor; ?>;
         color: <?php echo $buttontextcolor ?>;
         border: 1px solid <?php echo $buttonbordercolor; ?>;
       }
       #fullwidth_content_repeatable--<?php echo $i ?> .button a:hover {
         color: <?php echo $buttonbordercolor ?>;
-        border: 1px solid <?php echo $buttontextcolor; ?>;
+        background-color: <?php echo $buttontextcolor; ?>;
       }
     <?php } ?>
   </style>

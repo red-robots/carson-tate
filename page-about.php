@@ -84,17 +84,13 @@ $button = get_field('button');
               <img src="<?php echo get_template_directory_uri() ?>/images/arrow-down.svg" alt="" class="arrow-down">
             </div>
           <?php
-            }
-
-            if($more_content){
+            } if($more_content){
           ?>
             <div class="more-content">
               <?php echo $more_content; ?>
             </div>
           <?php
-            }
-
-            if($image){
+            } if($image){
           ?>
             <div class="more-image">
               <figure>
@@ -128,9 +124,7 @@ $button = get_field('button');
               </a>
             </div>
           <?php
-            }
-
-            if($subtitle || $more_content || $image || $button ){
+            } if($subtitle || $more_content || $image || $button ){
               echo '</div>';
             }
           ?>

@@ -32,12 +32,14 @@
           <?php } ?>
           <?php if($linkedin || $email_address): ?>
             <div class="footer-list socials">
-              <?php if($linkedin): ?>
-                <a href="<?php echo $linkedin; ?>" target="_blank">LinkedIn</a>
-              <?php endif; ?>
-              <?php if($email_address): ?>
-                <a href="<?php echo anti_email_spam($email_address); ?>" target="_blank">Email</a>
-              <?php endif; ?>
+              <ul>
+                <?php if($linkedin): ?>
+                  <li><a href="<?php echo $linkedin; ?>" target="_blank">LinkedIn</a></li>
+                <?php endif; ?>
+                <?php if($email_address): ?>
+                  <li><a href="<?php echo anti_email_spam($email_address); ?>" target="_blank">Email</a></li>
+                <?php endif; ?>
+              </ul>
             </div>
           <?php endif; ?>
         </div>
