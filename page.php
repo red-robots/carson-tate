@@ -11,19 +11,21 @@
  *
  * @package bellaworks
  */
-?>
+get_header(); ?>
 
-<div id="primary" class="content-default">
-	<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area generic-layout">
+  <main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-      <header class="entry-title">
-        <h1><?php the_title(); ?></h1>
-      </header>
-		  
-      <div class="entry-content">
-        <?php the_content(); ?>
+      <div class="large-padding">
+        <header class="entry-title">
+          <h1><?php the_title(); ?></h1>
+        </header>
+        
+        <div class="entry-content">
+          <?php the_content(); ?>
+        </div>
       </div>
 
 		<?php endwhile; ?>

@@ -47,10 +47,17 @@ $old_rose: #924954;
 	font-weight: 100;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Canela Text Web Light';
+	src: url('fonts/CanelaText-Light-Web.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+}
 
 $font-hanken-grotesk: "hanken-grotesk",sans-serif;
 $font-canela-100: "Canela Text Web Thin", sans-serif;
 $font-canela-italic-100: "Canela Text Web", sans-serif;
+$font-canela-300: "Canela Text Web Light", sans-serif;
 
 $font_primary: $font-hanken-grotesk;
 $font_secondary: $font-canela-italic-100;
