@@ -31,10 +31,6 @@ $light_green: #c2c59b;
 $lime: #f0f2d8;
 $old_rose: #924954;
 
-//$font_primary: 'Libre Franklin', sans-serif;
-//$font_secondary: 'Poppins', sans-serif;
-//$font_primary: 'Brandon', sans-serif;
-
 @font-face {
 	font-family: 'Canela Text Web';
 	src: url('fonts/CanelaText-ThinItalic-Web.woff2') format('woff2');
@@ -66,7 +62,7 @@ $font_code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font_pre: "Courier 10 Pitch", Courier, monospace;
 
 $portrait:480px;
-$xswidth: 600px;
+$xswidth: 768px;
 $tabwidth: 820px;
 $midwidth: 960px;
 $deskwidth: 1200px;

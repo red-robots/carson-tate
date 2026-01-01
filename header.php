@@ -15,7 +15,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url'); ?>/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url'); ?>/images/favicon-16x16.png">
 <link rel="manifest" href="<?php bloginfo('template_url'); ?>/images/site.webmanifest">
-<link rel="stylesheet" href=https://use.typekit.net/zzb0tjr.css>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -38,9 +37,12 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('loading'); ?>>
 <div id="overlay"></div>
 <div id="popup-content"></div>
+<div id="loading">
+  <div class="loading-bar"><div class="loading-bar-progress"></div></div>
+</div>
 
 <div id="page" class="site cf">
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>	

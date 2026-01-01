@@ -8,28 +8,28 @@
  */
 
 get_header(); ?>
-<?php  
-$t1 = get_field("404_title_small","option");
-$red = get_field("404_title_red","option");
-$text = get_field("404_text","option");
-$bg = get_field("404_bg_image","option");
-$style = ($bg) ? ' style="background-image:url('.$bg['url'].')"':'';
-?>
-<main id="main" class="site-main page404 custom404" role="main"<?php echo $style ?>>
-	<div class="wrapper">
-		<section class="content404">
-			<?php if ($t1) { ?>
-			<p class="t1"><small><?php echo $t1 ?></small></p>	
-			<?php } ?>
-			<?php if ($red) { ?>
-			<h2 class="t2"><span><?php echo $red ?></span></h2>	
-			<?php } ?>
 
-			<?php if ($text) { ?>
-			<div class="text"><?php echo $text ?></div>
+<div id="primary" class="content-area-full">
+	<main id="main" class="site-main" role="main">
+ 
+		<section class="error-404 not-found large-padding">
+			<header class="page-header">
+				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bellaworks' ); ?></h1>
+			</header><!-- .page-header -->
+
+			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below?', 'bellaworks' ); ?></p>
+
+			<?php if ( has_nav_menu('sitemap') ) { ?>
+				<div id="sitemap-wrap">
+					<div class="wrapper">
+						<?php wp_nav_menu( array( 'theme_location' => 'sitemap', 'menu_id' => 'sitemap','container_class'=>'sitemap-links') ); ?>
+					</div>
+				</div>
 			<?php } ?>
-		</section>
-	</div>
-</main>
+		</section><!-- .error-404 -->
+
+	</main><!-- #main -->
+</div><!-- #primary -->
+
 <?php
 get_footer();

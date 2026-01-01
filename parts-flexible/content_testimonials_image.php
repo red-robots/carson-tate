@@ -11,6 +11,8 @@
   $buttontextcolor = (get_sub_field('button_text_color')) ? get_sub_field('button_text_color') : '#2f3030';
   $buttonbordercolor = (get_sub_field('button_border_color')) ? get_sub_field('button_border_color') : '#c1c1c1';
   $buttonbgcolor = (get_sub_field('button_bg_color')) ? get_sub_field('button_bg_color') : 'transparent';
+  $buttontextcolorhover = (get_sub_field('button_text_color_hover')) ? get_sub_field('button_text_color_hover') : '#fcfcfc';
+  $buttonbgcolorhover = (get_sub_field('button_bg_color_hover')) ? get_sub_field('button_bg_color_hover') : '#2f3030';
 
   $image = get_sub_field('image');
   $image_position = get_sub_field('image_position');
@@ -42,8 +44,9 @@
         border: 1px solid <?php echo $buttonbordercolor; ?>;
       }
       .two_column_image_and_text--<?php echo $i ?> .button a:hover {
-        color: <?php echo $buttonbordercolor ?>;
-        background-color: <?php echo $buttontextcolor; ?>;
+        color: <?php echo $buttontextcolorhover ?>;
+        border-color: <?php echo $buttonbgcolorhover; ?>;
+        background-color: <?php echo $buttonbgcolorhover; ?>;
       }
   <?php } ?>
   </style>

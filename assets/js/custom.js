@@ -51,50 +51,6 @@ jQuery(document).ready(function ($) {
   location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (s, k, v) {
     params[k] = v;
   });
-  $('.inline').colorbox({
-    inline: true,
-    width: "50%" // href:".instr",
-    // innerWidth: 300
-
-  }); // $('.loop').owlCarousel({
-  //     center: true,
-  //     items:2,
-  //     nav: true,
-  //     loop:true,
-  //     margin:15,
-  //     autoplay:true,
-  //     smartSpeed: 1000,
-  //     autoplayTimeout:10000,
-  //     autoplayHoverPause:true,
-  //     responsive:{
-  //       600:{
-  //         items:1
-  //       },
-  //       400:{
-  //         items:1
-  //       }
-  //     }
-  // });
-  // $('.carousel-center-loop').owlCarousel({
-  //     center: true,
-  //     items:2,
-  //     nav: true,
-  //     loop:true,
-  //     margin:15,
-  //     autoplay:true,
-  //     smartSpeed: 1000,
-  //     autoplayTimeout:10000,
-  //     autoplayHoverPause:true,
-  //     responsive:{
-  //       400:{
-  //         items:1
-  //       },
-  //       768: {
-  //         items:2
-  //       }
-  //     }
-  // });
-
   /*
   *
   *     Subnaviagation Animation
@@ -137,90 +93,6 @@ jQuery(document).ready(function ($) {
   }
   /*
   *
-  *     Controls the today dropdown
-  *
-  *
-  */
-  // let menuOpen = false;
-  // const tl = gsap.timeline({
-  //   paused: true,
-  //   defaults: { duration: 0.3, ease: "power1.inOut" }
-  // });
-  // tl.fromTo(".today", {  }, {  }, 0)
-  //   .fromTo(
-  //     ".today-dropdown",
-  //     { visibility: "hidden", height: "0", padding: "0" },
-  //     { visibility: "visible", height: "auto", padding: "40" },
-  //     0
-  //   )
-  //   .fromTo(
-  //     "li.info",
-  //     { opacity: 0, y: "0.5em", stagger: 0.1 },
-  //     { opacity: 1, y: "0em", stagger: 0.1 }
-  //   )
-  //   .fromTo(
-  //     "li.tablink",
-  //     { opacity: 0, y: "0.5em", stagger: 0.1 },
-  //     { opacity: 1, y: "0em", stagger: 0.1 }
-  //   );
-  // document.querySelector(".today").addEventListener("mouseover", () => {
-  //   if (!menuOpen) {
-  //     tl.play();
-  //     menuOpen = true;
-  //   } else {
-  //     tl.reverse();
-  //     menuOpen = false;
-  //   }
-  // });
-
-  /*
-  *
-  *     Controls the today dropdown - MOBILE
-  *
-  *
-  */
-  // let menuOpenMobile = false;
-  // const tlmobile = gsap.timeline({
-  //   paused: true,
-  //   defaults: { duration: 0.3, ease: "power1.inOut" }
-  // });
-  // tlmobile.fromTo(".today-mobile", {  }, {  }, 0)
-  //   .fromTo(
-  //     ".today-mobile-dropdown",
-  //     { visibility: "hidden", height: "0", padding: "0" },
-  //     { visibility: "visible", height: "auto", padding: "10" },
-  //     0
-  //   )
-  //   .fromTo(
-  //     "li.info-mobile",
-  //     { opacity: 0, y: "0.5em", stagger: 0.1 },
-  //     { opacity: 1, y: "0em", stagger: 0.1 }
-  //   )
-  //   .fromTo(
-  //     "li.tablink-mobile",
-  //     { opacity: 0, y: "0.5em", stagger: 0.1 },
-  //     { opacity: 1, y: "0em", stagger: 0.1 }
-  //   );
-  // document.querySelector(".today-mobile").addEventListener("click", () => {
-  //   if (!menuOpenMobile) {
-  //     tlmobile.play();
-  //     menuOpenMobile = true;
-  //   } else {
-  //     tlmobile.reverse();
-  //     menuOpenMobile = false;
-  //   }
-  // });
-  // $('.today').click(function() {
-  //   var id = $(this).data('id');
-  //   $('.today-dropdown[data-id="' + id + '"]').toggleClass('show');
-  // });
-  // $(document).on("click",".site-header .navbar .today",function(e){
-  //   e.preventDefault();
-  //   $(this).next('.today-dropdown').toggleClass('active');
-  // });
-
-  /*
-  *
   *     Fixed Navigation on Scroll up
   *
   *
@@ -257,24 +129,6 @@ jQuery(document).ready(function ($) {
 
     prevScrollPosition = currentScrollPosition;
   });
-  /*
-  *
-  *     Mobile Navigation
-  *
-  *
-  */
-  // $(document).on('click','#mobile-menu-toggle',function(){
-  //   $('body').toggleClass('mobile-menu-open');
-  //   $(this).toggleClass('active');
-  //   $('.mobile-navigation').toggleClass('active');
-  // });
-  // $(document).on('click','#overlay',function(){
-  //   $(this).removeClass('active');
-  //   $('body').removeClass('mobile-menu-open');
-  //   $('#mobile-menu-toggle').removeClass('active');
-  //   $('.mobile-navigation').removeClass('active');
-  // });
-
   $(".header-socials-list a span").each(function (e) {
     var elem = $(this),
         t = elem.html();
@@ -288,9 +142,18 @@ jQuery(document).ready(function ($) {
   });
   $(".footer-list ul li a").each(function (e) {
     var elem = $(this),
-        t = elem.text();
+        t = elem.html();
     elem.html("<span>" + t + "</span><span>" + t + "</span>");
   });
+
+  if ($("#sitemap").length > 0) {
+    $("ul#sitemap li a").each(function (e) {
+      var elem = $(this),
+          t = elem.html();
+      elem.html("<span>" + t + "</span><span>" + t + "</span>");
+    });
+  }
+
   $(document).on("click", "a.mobile-parent-link", function (e) {
     e.preventDefault();
     $(this).parent().toggleClass('show-submenu');
@@ -304,18 +167,6 @@ jQuery(document).ready(function ($) {
   }); // Testimonials - Repeatable
 
   if ($(".quote-slider").length > 0) {
-    // var swiper = new Swiper(".quote-slider", {
-    // 	slidesPerView: 1,
-    // 	spaceBetween: 30,
-    // 	speed: 1000,
-    // 	navigation: {
-    // 		nextEl: '.swiper-button-next',
-    // 		prevEl: '.swiper-button-prev',
-    // 	},
-    // 	autoplay: {
-    // 		delay: 5000,
-    // 	}
-    // });
     $('.quote-slider').owlCarousel({
       items: 1,
       nav: true,
@@ -327,23 +178,19 @@ jQuery(document).ready(function ($) {
       //autoplayTimeout:5000,
       //autoplayHoverPause:true,
       navContainer: '#quoteNav',
-      navText: ["<div class='arrow-prev'></div>", "<div class='arrow-next'></div>"]
+      navText: ["<div class='arrow-wrapper'><i class='arrow-prev right'></i><i class='arrow-prev'></i></div>", "<div class='arrow-wrapper'><i class='arrow-next left'></i><i class='arrow-next'></i></div>"]
     });
   }
 
   $(".fs-rest .fs-label-wrap").on("click", function (e) {
     e.preventDefault();
-    $(this).toggleClass("fs-open"); // $(".corpnav").addClass("open");
-    //$(".corpnav").addClass("open");
-    // $("li.corplink").addClass('active');
-
+    $(this).toggleClass("fs-open");
     $(this).next('.fs-dropdown').toggleClass('fs-hidden');
   }); // init Isotope
 
   var $container = $('#rest-isotope').isotope({
     itemSelector: '.item'
-  }); // var $output = $('#output');
-  // filter with selects and checkboxes
+  }); // filter with selects and checkboxes
 
   var $checkboxes = $('#form-ui input');
   $checkboxes.change(function () {
@@ -1026,6 +873,15 @@ jQuery(document).ready(function ($) {
     });
     parent.toggleClass('active');
   });
+  setTimeout(function () {
+    $('.loading-bar-progress').css('width', '100%');
+    setTimeout(function () {
+      $('body').removeClass('loading');
+      setTimeout(function () {
+        $('#loading').remove();
+      }, 500);
+    }, 200);
+  }, 1000);
 }); // END #####################################    END
 "use strict";
 

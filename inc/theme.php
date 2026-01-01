@@ -6,43 +6,7 @@
  *
  * @package bellaworks
  */
-class RW_GF_Total_Field_Logic {
-  
-    public function __construct() {
-        add_action( 'init', array( $this, 'init' ) );
-    }
-  
-    function init() {
-        if ( ! property_exists( 'GFForms', 'version' ) || ! version_compare( GFForms::$version, '1.9', '>=' ) ) {
-            return;
-        }
-  
-        add_filter( 'gform_admin_pre_render', array( $this, 'enable_total_in_conditional_logic' ) );
-    }
-  
-    function enable_total_in_conditional_logic( $form ) {
-        if ( GFCommon::is_entry_detail() ) {
-            return $form;
-        }
-  
-        echo "<script type='text/javascript'>" .
-             " gform.addFilter('gform_is_conditional_logic_field', function (isConditionalLogicField, field) {" .
-             "     return field.type == 'total' ? true : isConditionalLogicField;" .
-             '  });' .
-             "  gform.addFilter('gform_conditional_logic_operators', function (operators, objectType, fieldId) {" .
-             '      var targetField = GetFieldById(fieldId);' .
-             "      if (targetField && targetField['type'] == 'total') {" .
-             "          operators = {'>': 'greaterThan', '<': 'lessThan'};" .
-             '      }' .
-             '      return operators;' .
-             '  });' .
-             '</script>';
-  
-        return $form;
-    }
-  
-}
-new RW_GF_Total_Field_Logic();
+
 /*-------------------------------------
   Custom client login, link and title.
 ---------------------------------------*/
@@ -52,9 +16,22 @@ function my_login_logo() {
   $logo_url = ($logoImg) ? $logoImg[0] : '';
   if($custom_logo_id) { ?>
   <style type="text/css">
+    body.login {
+      background: #f4ebe9;
+    }
+    body.login div#login {
+      position: relative;
+      z-index: 10;
+    }
+    body.login div#login form {
+      border-radius: 5px;
+      border: none;
+    }
     body.login div#login h1 a {
       background-image: url(<?php echo $logo_url; ?>);
       background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
       width: 100%;
       height: 100px;
       margin-bottom: 10px;
@@ -62,7 +39,33 @@ function my_login_logo() {
     .login #backtoblog, .login #nav {
       text-align: center;
     }
-
+    body.login div#login p.submit {
+      width: 100%; 
+      margin-top: 35px;
+    }
+    body.login div#login p.submit input.button {
+      width: 100%;
+      text-align: center;
+      border-radius: 4px;
+    }
+    body.login.wp-core-ui .button-primary {
+      font-size: 13px;
+      font-weight: bold;
+      background: #ab653c;
+      border-color: #ab653c;
+      transition: all ease .3s;
+    }
+    body.login.wp-core-ui .button-primary:hover {
+      color: #2f3030;
+      background: #ceb8ad;
+      border-color: #ceb8ad;
+    }
+    body.login div#login a {
+      color: #2f3030;
+    }
+    body.login div#login a:hover {
+      color: #ab653c;
+    }
   </style>
 <?php }
 }
@@ -77,7 +80,7 @@ add_filter('login_headerurl','loginpage_custom_link');
 function bella_login_logo_url_title() {
     return get_bloginfo('name');
 }
-add_filter( 'login_headertext', 'bella_login_logo_url_title' );
+add_filter( 'login_headertitle', 'bella_login_logo_url_title' );
 
 /*-------------------------------------
 	Adds Options page for ACF.
@@ -173,33 +176,33 @@ add_action( 'init', 'my_theme_add_editor_styles' );
 /*-------------------------------------
   Change Admin Labels
 ---------------------------------------*/
-// function change_post_menu_label() {
-//     global $menu;
-//     global $submenu;
-//     $menu[5][0] = 'Posts';
-//     $submenu['edit.php'][5][0] = 'Posts';
-//     $submenu['edit.php'][10][0] = 'Add Post';
-//     //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
-//     //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
-//     echo '';
-// }
+function change_post_menu_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'News';
+    $submenu['edit.php'][5][0] = 'News';
+    $submenu['edit.php'][10][0] = 'Add News Item';
+    //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
+    //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
+    echo '';
+}
 
-// function change_post_object_label() {
-//         global $wp_post_types;
-//         $labels = &$wp_post_types['post']->labels;
-//         $labels->name = 'Stories';
-//         $labels->singular_name = 'Story';
-//         $labels->add_new = 'Add Story';
-//         $labels->add_new_item = 'Add Story';
-//         $labels->edit_item = 'Edit Story';
-//         $labels->new_item = 'Story';
-//         $labels->view_item = 'View Story';
-//         $labels->search_items = 'Search Story';
-//         $labels->not_found = 'No Story found';
-//         $labels->not_found_in_trash = 'No Story found in Trash';
-//     }
-// add_action( 'init', 'change_post_object_label' );
-// add_action( 'admin_menu', 'change_post_menu_label' );
+function change_post_object_label() {
+        global $wp_post_types;
+        $labels = &$wp_post_types['post']->labels;
+        $labels->name = 'News';
+        $labels->singular_name = 'News Item';
+        $labels->add_new = 'Add News Item';
+        $labels->add_new_item = 'Add News Item';
+        $labels->edit_item = 'Edit News Item';
+        $labels->new_item = 'News Item';
+        $labels->view_item = 'View News Item';
+        $labels->search_items = 'Search News';
+        $labels->not_found = 'No News found';
+        $labels->not_found_in_trash = 'No News found in Trash';
+    }
+add_action( 'init', 'change_post_object_label' );
+add_action( 'admin_menu', 'change_post_menu_label' );
 
 /*-------------------------------------
   Add a last and first menu class option

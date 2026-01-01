@@ -10,7 +10,7 @@ $address = get_field('address', 'option');
 $phone = get_field('phone', 'option');
 ?>
 
-<div id="contact" class="content-area contact-page-template">
+<div id="contact" class="content-area-full contact-page-template">
   <main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>

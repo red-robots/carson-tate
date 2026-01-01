@@ -48,7 +48,7 @@
     <div class="footer-credits large-padding">
       <div class="footer-credits-grid">
         <div class="footer-credits-text">Bellaworks</div>
-        <nav class="footer-credits-nav" role="navigation">
+        <nav class="footer-credits-nav footer-list" role="navigation">
           <?php
             wp_nav_menu(
               array(
