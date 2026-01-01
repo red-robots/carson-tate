@@ -19282,7 +19282,7 @@ body.modal-open {
 	}
 
 	.quote-list {		
-		border: 1px solid #dfc0b8;
+		border: 1px solid $pink_border;
 		background-color: transparent;
 		border-radius: .35rem;
 		max-width: 60vw;
@@ -19300,6 +19300,11 @@ body.modal-open {
 		@include desk {
 			max-width: 60vw;
 
+			&-small {
+				max-width: 38vw;
+			}
+		}
+		@include xxl {
 			&-small {
 				max-width: 40vw;
 			}
@@ -19566,7 +19571,7 @@ body.modal-open {
 		height: 100%;
 		display: flex;
 
-		@include mid {
+		@include desk {
 			order: 2;
 		}
 
@@ -19579,7 +19584,7 @@ body.modal-open {
 			@include tab {
 				font-size: 3rem;
 			}
-			@include mid {
+			@include desk {
 				font-size: 4.5rem;
 			}
 
@@ -19593,7 +19598,7 @@ body.modal-open {
 					font-size: 1rem;
         			top: -25px;
 				}
-				@include mid {
+				@include desk {
 					font-size: 1.5rem;
 					top: -37px;
 				}
@@ -19620,7 +19625,10 @@ body.modal-open {
 
 			&-content {
 				margin-top: 1.2rem;
-				max-width: 30rem;
+				
+				@include desk {
+					max-width: 30rem;
+				}
 
 				p {
 					font-size: 1.25rem;
@@ -19637,7 +19645,7 @@ body.modal-open {
 					@include tab {
 						margin-bottom: 4.5rem;
 					}
-					@include mid {
+					@include desk {
 						margin-bottom: 6rem;
 					}
 
@@ -19665,7 +19673,7 @@ body.modal-open {
 		margin-bottom: -1px;
 		display: grid;
 
-		@include mid {
+		@include desk {
 			grid-template-columns: 1fr 1fr;
 		}
 
@@ -19688,7 +19696,7 @@ body.modal-open {
 			@include tab {
 				min-height: 90vw;
 			}
-			@include mid {
+			@include desk {
 				min-height: 100vh;
 				order: 1;
 			}

@@ -4029,7 +4029,7 @@ body.modal-open{overflow:hidden}
 .two_column_image_and_text .flexwrap .textcol h2 em,.two_column_image_and_text .flexwrap .textcol h2 strong{color:#924954;font-family:"Canela Text Web",sans-serif}
 .two_column_image_and_text .flexwrap .textcol h2 em.black-text,.two_column_image_and_text .flexwrap .textcol h2 strong.black-text{color:#2f3030}
 .two_column_image_and_text .flexwrap .textcol .inside-wrapper{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex}
-.two_column_image_and_text .flexwrap .textcol .inside-content{margin-top:1.2rem;max-width:30rem}
+.two_column_image_and_text .flexwrap .textcol .inside-content{margin-top:1.2rem}
 .two_column_image_and_text .flexwrap .textcol .inside-content p{font-size:1.25rem;line-height:1.5}
 .two_column_image_and_text .flexwrap .textcol .inside-content .content{margin-bottom:4rem}
 .two_column_image_and_text .flexwrap .textcol .inside-content .content.no-margin-b{margin-bottom:0}
@@ -4562,12 +4562,6 @@ body.subpage.single.single-activity .content-default.new-layout .pass-price-opti
 .flexible_content_faqs{grid-template-columns:1fr .3fr}
 .flexible_content_faqs .wrapper .title h2,.flexible_content_faqs .wrapper .title h3{font-size:4rem}
 .flexible_content_faqs .side-banner{max-height:100vh}
-.two_column_image_and_text .flexwrap .textcol{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
-.two_column_image_and_text .flexwrap .textcol h2{font-size:4.5rem}
-.two_column_image_and_text .flexwrap .textcol h2 sup{font-size:1.5rem;top:-37px}
-.two_column_image_and_text .flexwrap .textcol .inside-content .content{margin-bottom:6rem}
-.two_column_image_and_text .flexwrap.half{grid-template-columns:1fr 1fr}
-.two_column_image_and_text .flexwrap.half .imagecol{min-height:100vh;-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
 .productivity-page-template .splitbox{grid-row-gap:4rem;grid-template-rows:auto;grid-template-columns:1fr 1fr;grid-auto-columns:1fr;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start}
 .productivity-page-template .splitbox-content .splitbox-text{font-size:1.625rem}
 }@media screen and (min-width:960px){.section--schedules .section-two_column_row .flexwrap{min-height:480px}
@@ -4601,10 +4595,18 @@ section.visit .img h2{font-size:50px}
 .repeatable-content-testimonails .quote-grid-small{grid-template-columns:1fr}
 .repeatable-content-testimonails .quote-grid h2{font-size:5rem}
 .repeatable-content-testimonails .quote-list{max-width:60vw}
-.repeatable-content-testimonails .quote-list-small{max-width:40vw}
+.repeatable-content-testimonails .quote-list-small{max-width:38vw}
 .repeatable-content-testimonails .quote-list .quote-slider .quote-image img{-o-object-position:50% 50%;object-position:50% 50%}
+.two_column_image_and_text .flexwrap .textcol{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
+.two_column_image_and_text .flexwrap .textcol h2{font-size:4.5rem}
+.two_column_image_and_text .flexwrap .textcol h2 sup{font-size:1.5rem;top:-37px}
+.two_column_image_and_text .flexwrap .textcol .inside-content{max-width:30rem}
+.two_column_image_and_text .flexwrap .textcol .inside-content .content{margin-bottom:6rem}
+.two_column_image_and_text .flexwrap.half{grid-template-columns:1fr 1fr}
+.two_column_image_and_text .flexwrap.half .imagecol{min-height:100vh;-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
 }@media(min-width:1300px){section.homepage-hero .home-info .info h1{font-size:60px}
 .archive-posts-wrap .entry{width:33.33%}
+.repeatable-content-testimonails .quote-list-small{max-width:40vw}
 }@media screen and (min-width:1400px){#section-faqs .faq-item{padding:0 20px 0 40px}
 }@media screen and (min-width:1500px){#section-whattowear.half .col.options{padding-left:8vw;padding-right:8vw}
 }@media screen and (min-width:1600px){#primary.buy-page.buy-page-new .access-pass-options{padding-left:10vw;padding-right:10vw}
