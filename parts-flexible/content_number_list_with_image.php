@@ -12,7 +12,7 @@
     $column_class .=' image-' . $image_position;
   }
   if($title || $content || $image) { ?>
-  <section class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> <?php echo $column_class; ?>">
+  <section id="<?php echo $title; ?>" class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> <?php echo $column_class; ?>">
     <style>
       .two_column_image_and_text--<?php echo $i ?> h2,
       .two_column_image_and_text--<?php echo $i ?> p { color:<?php echo $textcolor ?>; }

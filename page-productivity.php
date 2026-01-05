@@ -72,19 +72,50 @@ $button = get_field('button');
             <?php } ?>
           </div>
         <?php } ?>
-          
         </div>
+
         <?php
             $thumbId = get_post_thumbnail_id(); 
             $featImg = wp_get_attachment_image_src($thumbId,'full');
 
             if($featImg){
           ?>
-          <div class="service-banner">
-            <img src="<?php echo $featImg[0]; ?>" alt="<?php echo $featImg[0]; ?>"></a>
-          </div>
+            <div class="service-banner">
+              <img src="<?php echo $featImg[0]; ?>" alt="<?php echo $featImg[0]; ?>"></a>
+            </div>
         <?php } ?>
       </div>
+
+      <?php if( have_rows('flexible_content') ){ ?>
+        <div id="sticky-filter">
+          <div class="sticky-filter">
+            <div class="sticky-filter-title">Productivity Styles:</div>
+              <div class="sticky-filter-wrap">
+                <div class="sticky-filter-list">
+                  <?php
+                    while ( have_rows('flexible_content') ){
+                      the_row();
+
+                      if( get_row_layout() == 'content_number_list_with_image' ) {
+
+                      $title = get_sub_field('title');
+                  ?>
+                      <div class="button button-custom">
+                        <a class="sticky-filter-item" href="#<?php echo $title; ?>">
+                          <span><?php echo $title; ?></span>
+                          <span><?php echo $title; ?></span>
+                        </a>
+                      </div>
+                  <?php
+                        }
+                      }
+                  ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
+
     <?php endwhile; ?>
 
     <?php get_template_part('parts/repeatable-blocks'); ?>

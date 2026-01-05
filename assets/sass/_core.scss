@@ -79,7 +79,15 @@ body {
 			top: auto;
 		  }
 		}
-	  }
+		#sticky-filter {
+			top: 142px;
+		
+			@include mid {
+				top: 8rem;
+			}
+		}
+		
+	}
 }
 section, div {
 	&:focus {
@@ -226,13 +234,10 @@ a {
 }
 .site {
 	position: relative;
-	overflow-x: hidden;
-	overflow-y: auto;
+	// overflow-x: hidden;
+	// overflow-y: auto;
+	overflow: clip;
 	transition: opacity 100ms ease-in-out;
-
-	@include mid {
-		overflow: clip;
-	}
 }
 .flexwrap {
 	@include flexgroup();
@@ -19759,6 +19764,97 @@ body.modal-open {
 			padding-top: 1.5rem;
 			padding-bottom: 1.5rem;
 			display: grid;
+		}
+	}
+}
+
+.service-body {
+	flex-direction: column;
+    margin-bottom: -1px;
+    display: flex;
+}
+
+#sticky-filter {
+	background-color: $white;
+	z-index: 200;
+	position: sticky;
+	top: 96px;
+
+	@include mid {
+		top: 6rem;
+	}
+
+	.sticky-filter {
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		border-top: 1px solid $gray;
+		border-bottom: 1px solid $gray;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+		grid-auto-columns: 1fr;
+		align-items: center;
+		min-height: 4.5rem;
+		display: grid;
+
+		@include tab {
+			grid-template-columns: auto 1fr;
+		}
+
+		&-title {
+			align-items: center;
+			display: flex;
+			padding: 1.5rem 1.25rem 1rem;
+			overflow: auto;
+
+			@include tab {
+				border-right: 1px solid $gray;
+				padding: 0 2rem;
+				overflow: hidden;
+			}
+			@include mid {
+				padding: 0 4rem;
+			}
+		}
+
+		&-wrap {
+			align-items: center;
+			align-self: stretch;
+    		display: flex;
+			padding: 0 1.25rem 1.5rem 1.25rem;
+			overflow: auto;
+
+			@include tab {
+				padding: 0 2rem;
+				overflow: hidden;
+			}
+			@include mid {
+				padding: 0 4rem ;
+			}
+		}
+
+		&-list {
+			grid-column-gap: 2.25rem;
+			grid-row-gap: 2.25rem;
+			white-space: nowrap;
+			align-items: center;
+			display: flex;
+		}
+
+
+		&-item {
+			background-color: transparent;
+			border-radius: 0;
+			color: $black;
+			max-width: 100%;
+    		display: inline-block;
+			color: $black_gray;
+			text-decoration: none;
+			padding: 0;
+			border: none;
+			font-size: .875rem;
+    		font-weight: 400;
+			height: 21px;
+			letter-spacing: -0.4px;
 		}
 	}
 }
