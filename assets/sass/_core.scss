@@ -4731,11 +4731,6 @@ li.rdate {
 /** CONTACT PAGE **/
 #contact.contact-page-template {
 	background-color: $white_1;
-	margin-top: 32px;
-
-	@include tab {
-		margin-top: 96px;
-	}
 
 	h3 {
 		letter-spacing: -.1875rem;

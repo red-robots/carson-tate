@@ -1893,7 +1893,7 @@ li.rdate{width:100%;padding:5px;background-color:#ececec;margin:8px 0;font-weigh
 .section-text-and-image.half .rightcol.videoCol .iframe-wrap iframe{border:0;width:100%}
 [style*="--aspect-ratio"]>:first-child{width:100%}
 [style*="--aspect-ratio"]>img{height:auto}
-#contact.contact-page-template{background-color:#faf7f4;margin-top:32px}
+#contact.contact-page-template{background-color:#faf7f4}
 #contact.contact-page-template h3{letter-spacing:-0.1875rem;font-size:3.625rem;font-weight:400;line-height:1.1;margin:0}
 #contact.contact-page-template h3 i,#contact.contact-page-template h3 em,#contact.contact-page-template h3 strong{font-family:"Canela Text Web",sans-serif;color:#ab653c}
 #contact.contact-page-template p{opacity:.8}
@@ -4165,7 +4165,6 @@ section.homepage-hero .home-info .branding{width:300px}
 .text-and-gallery .half .gallerycol{width:60%}
 .section-text-and-image.half .leftcol .wrap{padding:15px}
 .section-text-and-image.half .leftcol .inner{max-width:80%;padding-top:5%;padding-bottom:5%}
-#contact.contact-page-template{margin-top:96px}
 #contact.contact-page-template h3{font-size:5rem}
 #contact.contact-page-template .connect_grid{grid-column-gap:5rem;grid-row-gap:5rem;grid-template-columns:1fr 1fr 1fr}
 #contact.contact-page-template .address .inside{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
