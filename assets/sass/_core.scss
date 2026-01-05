@@ -1174,20 +1174,6 @@ body.mobile-menu-open {
 
 /* MOBILE RESPONSIVE */
 @media screen and (max-width: $tabwidth) {
-	header.site-header {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  z-index: 100;
-	  .wrapper {
-		width: 100%;
-		height: 100%;
-	  }
-	  .logo-left {
-		top: 15px;
-		left: 20px;
-	  }
-	}
 	body.mobile-menu-open {
 	  overflow: hidden;
 	  .floral-pattern {
@@ -1310,6 +1296,7 @@ body.mobile-menu-open {
 	justify-content: center;
     align-items: center;
 	text-align: center;
+	margin-top: 96px;
 
 	.wrapper {
 		max-width: 60rem;
