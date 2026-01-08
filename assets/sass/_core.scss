@@ -919,6 +919,19 @@ nav.new-nav {
 		@include xs {
 			padding: 1.3rem;
 		}
+
+		@media screen and (max-width: 520px) {
+			&:nth-child(4) > a {
+				> span {
+					height: 72px;
+					max-width: 245px;
+				}
+
+				&:hover > span {
+					transform: translateY(-72px);
+				}
+			}
+		}
 	}
 	#primary-menu > li > a {
 		color: $black_gray;
@@ -957,8 +970,12 @@ nav.new-nav {
 
 		sup {
 			font-size: 12px;
-			top: -22px;
+			top: -16px;
 			left: 0;
+
+			@include xs {
+				top: -22px;
+			}
 		}
 
 		&:after {
