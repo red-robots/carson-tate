@@ -1355,7 +1355,7 @@ nav.new-nav .mega-menu .mega-menu-content a:after{content:""}
 .mobile-navigation #primary-menu>li>a i{display:block;font-family:"Canela Text Web",sans-serif}
 .mobile-navigation #primary-menu>li>a sup{font-size:12px;top:-22px;left:0}
 .mobile-navigation #primary-menu>li>a:after{content:"";background-image:url("images/arrow-right.svg");background-size:10px;background-repeat:no-repeat;padding:.7rem 1.3rem;border:1px solid #ececec;border-radius:100rem;position:absolute;height:10px;width:10px;right:0;top:50%;opacity:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);background-position:-100% center;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out}
-.mobile-navigation #primary-menu>li>a:hover span{-webkit-transform:translateY(-54px);transform:translateY(-54px)}
+.mobile-navigation #primary-menu>li>a:hover span{-webkit-transform:translateY(-36px);transform:translateY(-36px)}
 .mobile-navigation #primary-menu>li>a:hover:after{opacity:1;background-position:center center}
 .mobile-navigation #primary-menu>li:hover>a{background:#fcfcfc;color:#2f3030}
 .mobile-navigation #primary-menu>li ul{display:none;margin:0;padding:10px 0;list-style:none;text-align:center;border-bottom:1px solid #c1c1c1}
@@ -1508,7 +1508,6 @@ body.subpage h1.page-title{color:#000}
 .title-header sup{font-size:1rem;display:inline-block;top:-19px;left:5px}
 .font-canela{font-family:"Canela Text Web Thin",sans-serif}
 .about-page-template .about-grid{grid-column-gap:0;grid-row-gap:0;grid-template-rows:auto;grid-template-columns:1fr;grid-auto-columns:1fr;display:grid}
-.about-page-template .about-grid-half .about-content .about-text p{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:2rem;-moz-column-gap:2rem;column-gap:2rem}
 .about-page-template .about-grid .about-image{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;height:100%;max-height:130vh;position:relative;top:0;overflow:hidden;aspect-ratio:1;min-height:80vw;top:0}
 .about-page-template .about-grid .about-image img{-o-object-fit:cover;object-fit:cover;-o-object-position:50% 0;object-position:50% 0;width:100%;height:101%;position:absolute;inset:0}
 .about-page-template .about-grid .about-image .image-overlay{z-index:3;background-color:#1313131a;position:absolute;inset:0}
@@ -1517,10 +1516,10 @@ body.subpage h1.page-title{color:#000}
 .about-page-template .about-grid .about-content .about-text{grid-column-gap:1.5rem;grid-row-gap:1.5rem;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;max-width:40rem;display:-webkit-box;display:-ms-flexbox;display:flex}
 .about-page-template .about-grid .about-content .about-text>p{font-size:1rem}
 .about-page-template .about-grid .about-numbers{border-top:1px solid #ececec;grid-column-gap:0;grid-row-gap:0;grid-template-rows:auto auto;grid-template-columns:1fr 1fr;grid-auto-columns:1fr;display:grid}
-.about-page-template .about-grid .about-numbers .number-item{z-index:100;width:100%;padding-left:4rem;padding-right:4rem;position:relative;border-right:1px solid #ececec;border-bottom:1px solid #ececec}
+.about-page-template .about-grid .about-numbers .number-item{z-index:100;width:100%;padding-left:1.25rem;padding-right:1.25rem;position:relative;border-right:1px solid #ececec;border-bottom:1px solid #ececec}
 .about-page-template .about-grid .about-numbers .number-content{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:3rem;padding-bottom:3rem;display:-webkit-box;display:-ms-flexbox;display:flex}
 .about-page-template .about-grid .about-numbers .number-flex{grid-column-gap:.5rem;grid-row-gap:.5rem;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex}
-.about-page-template .about-grid .about-numbers .number-heading{letter-spacing:-0.1875rem;font-size:4.5rem;font-family:"Canela Text Web Thin",sans-serif;line-height:1.1}
+.about-page-template .about-grid .about-numbers .number-heading{letter-spacing:-0.1875rem;font-size:2.5rem;font-family:"Canela Text Web Thin",sans-serif;line-height:1.1}
 .about-page-template .about-grid .about-numbers .embed-icon{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:1.5rem;height:1.5rem;display:-webkit-box;display:-ms-flexbox;display:flex}
 .about-page-template .about-grid .about-numbers .number-text{padding-top:1.2rem;margin-bottom:0;font-size:.875rem;font-weight:400;opacity:.8}
 .about-page-template .subtitle{grid-column-gap:.625rem;grid-row-gap:.625rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-bottom:1.25rem;display:-webkit-box;display:-ms-flexbox;display:flex}
@@ -4076,8 +4075,10 @@ body.modal-open{overflow:hidden}
 .mobile-navigation #primary-menu>li{padding:1.3rem}
 .mobile-navigation #primary-menu>li>a{font-size:2.25rem}
 .mobile-navigation #primary-menu>li>a span{height:54px}
+.mobile-navigation #primary-menu>li>a:hover span{-webkit-transform:translateY(-54px);transform:translateY(-54px)}
 body.search .has-image .image-col{width:33%;margin-bottom:0}
 body.search .has-image .text-col{width:67%;float:right;padding-left:30px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.about-page-template .about-grid .about-numbers .number-item{padding-left:2rem;padding-right:2rem}
 #section-checkin.section-content.has-two-images .col-left .flex-content{width:50%}
 .explore-other-stuff .columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:center;align-content:center}
 .explore-other-stuff .entry{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:50%;margin:5px 0}
@@ -4142,6 +4143,8 @@ section.homepage-hero .home-info .branding{width:300px}
 .title-header{font-size:4rem}
 .title-header sup{font-size:1rem;top:-25px}
 .about-page-template .about-grid .about-image{-o-object-fit:fill;object-fit:fill;min-height:70vh;aspect-ratio:auto}
+.about-page-template .about-grid .about-numbers .number-item{padding-left:4rem;padding-right:4rem}
+.about-page-template .about-grid .about-numbers .number-heading{font-size:3rem}
 #section-whattowear.half .model{padding-right:10vw;width:100%}
 #section-whattowear.half .options{width:65%}
 #section-checkin.section-content .col-left,#section-checkin.section-content .col-right{width:50%}
@@ -4526,8 +4529,10 @@ section.teasers .fullwidth-image .fullwidth-image__text h3.mobile{display:none}
 .title-header sup{font-size:1.5rem;top:-37px}
 .about-page-template .about-grid{grid-template-columns:1fr 1fr}
 .about-page-template .about-grid-full{grid-template-columns:1fr}
+.about-page-template .about-grid-half .about-content .about-text p{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:2rem;-moz-column-gap:2rem;column-gap:2rem}
 .about-page-template .about-grid .about-image{min-height:auto;-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3;position:sticky;top:94px}
 .about-page-template .about-grid .about-image img{-o-object-position:50% 50%;object-position:50% 50%}
+.about-page-template .about-grid .about-numbers .number-heading{font-size:4.5rem}
 .schedule-activities-info.new-layout .activities .activity-info{margin-bottom:8vh;padding-bottom:8vh}
 .post-type-race .race-types.multi-col .type{width:25%}
 .section-text-and-image.half .leftcol{width:35%}
