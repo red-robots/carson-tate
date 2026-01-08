@@ -3990,7 +3990,7 @@ body.modal-open{overflow:hidden}
 .repeatable-content-blocks .even .textcol .rb_buttons a{background:#2f3030}
 .repeatable-content-blocks figure{margin:0;background-size:cover;background-position:center;background-repeat:no-repeat}
 .repeatable-content-blocks figure img{width:100%;height:auto}
-.repeatable-content-testimonails .quote-grid{grid-column-gap:6vw;grid-row-gap:6vw;border-bottom:1px none var(--outline);grid-template-rows:auto;grid-auto-columns:1fr;margin-left:auto;margin-right:auto;display:block}
+.repeatable-content-testimonails .quote-grid{grid-column-gap:6vw;grid-row-gap:6vw;border-bottom:1px none var(--outline);grid-template-rows:auto;grid-auto-columns:1fr;margin-left:auto;margin-right:auto;display:grid}
 .repeatable-content-testimonails .quote-grid h2{letter-spacing:-0.1875rem;font-size:3rem;line-height:1.1}
 .repeatable-content-testimonails .quote-grid h2 em{font-family:"Canela Text Web",sans-serif}
 .repeatable-content-testimonails .subtitle{grid-column-gap:.625rem;grid-row-gap:.625rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-bottom:1.25rem;display:-webkit-box;display:-ms-flexbox;display:flex}
@@ -4462,7 +4462,7 @@ body.subpage.single.single-activity .content-default.new-layout .pass-price-opti
 .repeatable-content-blocks .half .imagecol{width:60%}
 .repeatable-content-blocks .half.even{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .repeatable-content-blocks figure{height:100%}
-.repeatable-content-testimonails .quote-grid{display:grid;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;grid-template-columns:1fr}
+.repeatable-content-testimonails .quote-grid{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;grid-template-columns:1fr}
 .repeatable-content-testimonails .quote-grid h2{font-size:4rem}
 .repeatable-content-testimonails .quote-list{padding-bottom:0;max-width:90vw;padding-right:5rem}
 .repeatable-content-testimonails .quote-list .quote-slider .quote-content{grid-template-columns:auto 1fr;padding:2rem}
