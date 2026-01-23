@@ -1224,7 +1224,8 @@ button:focus{outline:0}
 .owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;-webkit-transition:opacity .4s ease;transition:opacity .4s ease}
 .owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}
 div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
-h1,h2,h3,h4,h5,h6{font-weight:400;margin:0}
+h1,h2{font-weight:300;margin:0}
+h3,h4,h5,h6{font-weight:400;margin:0}
 p{font-size:1.1rem}
 li{margin-bottom:.625rem}
 *{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
@@ -1391,7 +1392,7 @@ body.mobile-menu-open .menu-toggle{opacity:0}
 #banner{width:100%;position:relative;background-color:#f4ebe9;min-height:90svh;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;margin-top:96px}
 #banner .wrapper{max-width:60rem;position:relative;z-index:2}
 #banner .wrapper .banner-container{height:100%}
-#banner .wrapper .banner-container h1{letter-spacing:-0.1875rem;font-size:3.625rem;font-weight:400;line-height:1.1;margin:0}
+#banner .wrapper .banner-container h1{letter-spacing:-0.1875rem;font-size:3.625rem;font-weight:300;line-height:1.1;margin:0}
 #banner .wrapper .banner-container h1 i,#banner .wrapper .banner-container h1 em,#banner .wrapper .banner-container h1 strong{font-family:"Canela Text Web",sans-serif;color:#ab653c}
 #banner .wrapper .banner-container h1 p{margin:0}
 #banner .wrapper .banner-container .banner-content{color:#2f3030;max-width:40rem;margin:0 auto}
@@ -3953,8 +3954,9 @@ body.modal-open{overflow:hidden}
 .fullwidth_content_repeatable .wrapper .button a:hover{color:#fcfcfc !important;background-color:#2f3030 !important}
 .flexible_content_faqs{grid-column-gap:0;grid-row-gap:0;grid-template-rows:auto;grid-template-columns:1fr;grid-auto-columns:1fr;padding:0;display:grid;position:relative;overflow:visible}
 .flexible_content_faqs .wrapper{z-index:100;width:100%;position:relative;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;text-align:left}
-.flexible_content_faqs .wrapper .title h2,.flexible_content_faqs .wrapper .title h3{letter-spacing:-0.1875rem;font-size:2.5rem;line-height:1.1;font-weight:normal}
+.flexible_content_faqs .wrapper .title h2,.flexible_content_faqs .wrapper .title h3{letter-spacing:-0.1875rem;font-size:2.5rem;line-height:1.1;font-weight:300}
 .flexible_content_faqs .wrapper .title h2 em,.flexible_content_faqs .wrapper .title h2 span,.flexible_content_faqs .wrapper .title h3 em,.flexible_content_faqs .wrapper .title h3 span{color:#424612;font-family:"Canela Text Web",sans-serif}
+.flexible_content_faqs .wrapper .title h2{font-weight:200}
 .flexible_content_faqs .wrapper .subtitle{grid-column-gap:.625rem;grid-row-gap:.625rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:3rem;padding-bottom:1.25rem;display:-webkit-box;display:-ms-flexbox;display:flex}
 .flexible_content_faqs .wrapper .subtitle .arrow-down{width:.625rem}
 .flexible_content_faqs .wrapper .faq{border-top:1px solid #c2c59b;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;display:-webkit-box;display:-ms-flexbox;display:flex}

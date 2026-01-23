@@ -10,7 +10,11 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
     hyphens: none;
     page-break-inside: avoid;
 }
-h1,h2,h3,h4,h5,h6 {
+h1, h2 {
+	font-weight: 300;
+	margin: 0;
+}
+h3,h4,h5,h6 {
 	font-weight: 400;
 	margin: 0;
 }
@@ -1334,7 +1338,7 @@ body.mobile-menu-open {
 			h1 {
 				letter-spacing: -.1875rem;
 				font-size: 3.625rem;
-				font-weight: 400;
+				font-weight: 300;
 				line-height: 1.1;
 				margin: 0;
 				@include tab {
@@ -18939,7 +18943,7 @@ body.modal-open {
 				letter-spacing: -.1875rem;
 				font-size: 2.5rem;
 				line-height: 1.1;
-				font-weight: normal;
+				font-weight: 300;
 				@include tab {
 					font-size: 3rem;
 					line-height: 1.2;
@@ -18952,6 +18956,9 @@ body.modal-open {
 					color: $olive_green;
 					font-family: $font-secondary;
 				}
+			}
+			h2 {
+				font-weight: 200;
 			}
 		}
 		.subtitle {
