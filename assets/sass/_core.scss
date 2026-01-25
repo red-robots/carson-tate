@@ -10,7 +10,7 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
     hyphens: none;
     page-break-inside: avoid;
 }
-h1, h2 {
+h1, h2, h3 {
 	font-weight: 300;
 	margin: 0;
 }
@@ -4777,10 +4777,10 @@ li.rdate {
 #contact.contact-page-template {
 	background-color: $white_1;
 
-	h3 {
+	h2 {
 		letter-spacing: -.1875rem;
 		font-size: 3.625rem;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 1.1;
 		margin: 0;
 
