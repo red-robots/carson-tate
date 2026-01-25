@@ -1224,7 +1224,7 @@ button:focus{outline:0}
 .owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;-webkit-transition:opacity .4s ease;transition:opacity .4s ease}
 .owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}
 div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
-h1,h2{font-weight:300;margin:0}
+h1,h2,h3{font-weight:300;margin:0}
 h3,h4,h5,h6{font-weight:400;margin:0}
 p{font-size:1.1rem}
 li{margin-bottom:.625rem}
@@ -1895,8 +1895,8 @@ li.rdate{width:100%;padding:5px;background-color:#ececec;margin:8px 0;font-weigh
 [style*="--aspect-ratio"]>:first-child{width:100%}
 [style*="--aspect-ratio"]>img{height:auto}
 #contact.contact-page-template{background-color:#faf7f4}
-#contact.contact-page-template h3{letter-spacing:-0.1875rem;font-size:3.625rem;font-weight:400;line-height:1.1;margin:0}
-#contact.contact-page-template h3 i,#contact.contact-page-template h3 em,#contact.contact-page-template h3 strong{font-family:"Canela Text Web",sans-serif;color:#ab653c}
+#contact.contact-page-template h2{letter-spacing:-0.1875rem;font-size:3.625rem;font-weight:300;line-height:1.1;margin:0}
+#contact.contact-page-template h2 i,#contact.contact-page-template h2 em,#contact.contact-page-template h2 strong{font-family:"Canela Text Web",sans-serif;color:#ab653c}
 #contact.contact-page-template p{opacity:.8}
 #contact.contact-page-template a{color:#2f3030;text-decoration:none}
 #contact.contact-page-template .connect_grid{border-top:1px solid #dfc0b8;grid-template-rows:auto;grid-column-gap:2rem;grid-row-gap:2rem;grid-template-columns:1fr 1fr;margin-top:2rem;padding-top:2rem;grid-auto-columns:1fr;display:grid}
@@ -4181,7 +4181,7 @@ section.homepage-hero .home-info .branding{width:300px}
 .text-and-gallery .half .gallerycol{width:60%}
 .section-text-and-image.half .leftcol .wrap{padding:15px}
 .section-text-and-image.half .leftcol .inner{max-width:80%;padding-top:5%;padding-bottom:5%}
-#contact.contact-page-template h3{font-size:5rem}
+#contact.contact-page-template h2{font-size:5rem}
 #contact.contact-page-template .connect_grid{grid-column-gap:5rem;grid-row-gap:5rem;grid-template-columns:1fr 1fr 1fr}
 #contact.contact-page-template .address .inside{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 #contact.contact-page-template .address,#contact.contact-page-template .map{height:50%}
@@ -4541,7 +4541,7 @@ section.teasers .fullwidth-image .fullwidth-image__text h3.mobile{display:none}
 .section-text-and-image.half .leftcol{width:35%}
 .section-text-and-image.half .rightcol{width:65%;padding-left:15px}
 .section-text-and-image.half .rightcol.videoCol .inside{height:100%}
-#contact.contact-page-template h3{font-size:6rem}
+#contact.contact-page-template h2{font-size:6rem}
 .archive-posts-wrap .entry{width:50%}
 .store-listings .product-brands .brand{width:33.33%;height:80px}
 .group-events-activities.section-content.columns4 .fbox,.grid-images.columns4 .fbox,.section-grid-images.section-content.columns4 .fbox,.camp-activities.section-content.columns4 .fbox{width:25%}
