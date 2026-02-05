@@ -19703,6 +19703,20 @@ body.modal-open {
 				align-items: flex-start;
 				height: 100%;
 				display: flex;
+
+				&.align-left {
+					text-align: left;
+				}
+				&.align-center {
+					text-align: center;
+
+					.inside-content {
+						margin: 1.2rem auto 0;
+					}
+				}
+				&.align-right {
+					text-align: right;
+				}
 			}
 
 			&-content {
@@ -19738,19 +19752,6 @@ body.modal-open {
 						p {
 							font-size: 1.1rem;
 						}
-					}
-					&.align-left {
-						text-align: left;
-					}
-					&.align-center {
-						text-align: center;
-
-						.inside .inside-content {
-							margin: 1.2rem auto 0;
-						}
-					}
-					&.align-right {
-						text-align: right;
 					}
 				}
 			}

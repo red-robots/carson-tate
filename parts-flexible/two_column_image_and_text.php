@@ -50,11 +50,11 @@
         <?php if ( $title || $content ) { ?>
           <div class="textcol large-padding">
             <div class="inside">
-              <div class="inside-wrapper">
+              <div class="inside-wrapper <?php echo $contentTextAlignment; ?>">
                  <h2 class="title"><?php echo $title; ?></h2>
                  <div class="inside-content">
                     <?php if ($content) { ?>
-                      <div class="content <?php echo $contentSpacing; ?> <?php echo $contentText; ?> <?php echo $contentTextAlignment; ?>"><?php echo anti_email_spam($content) ?></div>
+                      <div class="content <?php echo $contentSpacing; ?> <?php echo $contentText; ?>"><?php echo anti_email_spam($content) ?></div>
                       <?php                      
                         $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
                         $button_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
