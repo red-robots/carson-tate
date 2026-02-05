@@ -4037,7 +4037,7 @@ body.modal-open{overflow:hidden}
 .two_column_image_and_text .flexwrap .textcol .inside-wrapper.align-center{text-align:center}
 .two_column_image_and_text .flexwrap .textcol .inside-wrapper.align-center .inside-content{margin:1.2rem auto 0}
 .two_column_image_and_text .flexwrap .textcol .inside-wrapper.align-right{text-align:right}
-.two_column_image_and_text .flexwrap .textcol .inside-wrapper.align-right .inside-content{width:100%}
+.two_column_image_and_text .flexwrap .textcol .inside-wrapper.align-right .inside-content{width:100%;max-width:100%}
 .two_column_image_and_text .flexwrap .textcol .inside-content{margin-top:1.2rem}
 .two_column_image_and_text .flexwrap .textcol .inside-content p{font-size:1.25rem;line-height:1.5}
 .two_column_image_and_text .flexwrap .textcol .inside-content .content{margin-bottom:4rem}
