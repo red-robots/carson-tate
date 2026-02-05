@@ -19739,6 +19739,19 @@ body.modal-open {
 							font-size: 1.1rem;
 						}
 					}
+					&.align-left {
+						text-align: left;
+					}
+					&.align-center {
+						text-align: center;
+
+						.inside .inside-content {
+							margin: 1.2rem auto 0;
+						}
+					}
+					&.align-right {
+						text-align: right;
+					}
 				}
 			}
 		}

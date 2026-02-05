@@ -4038,6 +4038,10 @@ body.modal-open{overflow:hidden}
 .two_column_image_and_text .flexwrap .textcol .inside-content .content{margin-bottom:4rem}
 .two_column_image_and_text .flexwrap .textcol .inside-content .content.no-margin-b{margin-bottom:0}
 .two_column_image_and_text .flexwrap .textcol .inside-content .content.small-heading p{font-size:1.1rem}
+.two_column_image_and_text .flexwrap .textcol .inside-content .content.align-left{text-align:left}
+.two_column_image_and_text .flexwrap .textcol .inside-content .content.align-center{text-align:center}
+.two_column_image_and_text .flexwrap .textcol .inside-content .content.align-center .inside .inside-content{margin:1.2rem auto 0}
+.two_column_image_and_text .flexwrap .textcol .inside-content .content.align-right{text-align:right}
 .two_column_image_and_text .flexwrap.half{grid-column-gap:0;grid-row-gap:0;border-bottom:1px none var(--outline);grid-template-rows:auto;grid-template-columns:1fr;grid-auto-columns:1fr;width:100%;margin-bottom:-1px;display:grid}
 .two_column_image_and_text .flexwrap.half.image-right .textcol{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
 .two_column_image_and_text .flexwrap.half.image-right .imagecol{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}

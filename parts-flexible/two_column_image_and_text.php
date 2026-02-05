@@ -17,6 +17,7 @@
   }
   $contentSpacing = (get_sub_field('content_spacing')) ? get_sub_field('content_spacing') : 'no-margin-b';
   $contentText = (get_sub_field('content_text')) ? get_sub_field('content_text') : 'small-heading';
+  $contentTextAlignment = (get_sub_field('content_text_alignment')) ? get_sub_field('content_text_alignment') : 'align-left';
   
   if($title || $content || $image) { ?>
   <section class="two_column_image_and_text two_column_image_and_text--<?php echo $i ?> <?php echo $column_class; ?>">
@@ -53,7 +54,7 @@
                  <h2 class="title"><?php echo $title; ?></h2>
                  <div class="inside-content">
                     <?php if ($content) { ?>
-                      <div class="content <?php echo $contentSpacing; ?> <?php echo $contentText; ?>"><?php echo anti_email_spam($content) ?></div>
+                      <div class="content <?php echo $contentSpacing; ?> <?php echo $contentText; ?> <?php echo $contentTextAlignment; ?>"><?php echo anti_email_spam($content) ?></div>
                       <?php                      
                         $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
                         $button_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
