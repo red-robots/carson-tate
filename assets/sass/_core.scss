@@ -19716,6 +19716,10 @@ body.modal-open {
 				}
 				&.align-right {
 					text-align: right;
+
+					.inside-content {
+						width: 100%;
+					}
 				}
 			}
 
