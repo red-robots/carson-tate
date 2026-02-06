@@ -293,7 +293,6 @@ $checkboxes.change( function() {
 		});
 	}
 
-
 	var is_video_playing = false;
 
 	var $slides = $('.flexslider .slides li');
@@ -389,9 +388,45 @@ $checkboxes.change( function() {
 
 
     }
-	
- 	
 
+	// Button Custom for longer text in button
+	if( $('.two_column_image_and_text .button-custom').length > 0 && $(window).width() < 580){
+		$('.two_column_image_and_text').each( function(){
+			var btn = $(this).find('.button-custom');
+			var anchor = btn.children('a');
+
+			var height = btn.find('span').first().height();
+
+			console.log(btn.find('span').first().height());
+
+			anchor.css('height', (height + 12) + 'px');
+			anchor.children('span').css('height', (height + 14.4) + 'px');
+			btn.hover(
+				function(){
+					$(this).find('span').css('transform', 'translateY(-'+ (height + 14.4) +'px)');
+				},
+				function(){
+					$(this).find('span').css('transform', 'translateY(0');
+				}
+			);
+		});
+
+		//$('.button-custom a > span:nth-of-type(1)').each( function(){
+			// const elementHeight = $(this).height();
+			// $(this).parent('a').css('height', elementHeight + 'px');
+			// $(this).css('height', (elementHeight + 14.4) + 'px');
+			// $(this).parent(2).hover(
+			// 	function(){
+			// 		$(this).find('span').css('transform', 'translateY(-'+ (elementHeight + 14.4) +'px)');
+			// 	},
+			// 	function(){
+			// 		$(this).find('span').css('transform', 'translateY(0');
+			// 	}
+			// );
+			//console.log(elementHeight);
+		//});
+	}
+	
 
  // When was this added?
  	// $(document).on('click', function (e) {
