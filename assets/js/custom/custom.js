@@ -394,10 +394,7 @@ $checkboxes.change( function() {
 		$('.two_column_image_and_text').each( function(){
 			var btn = $(this).find('.button-custom');
 			var anchor = btn.children('a');
-
 			var height = btn.find('span').first().height();
-
-			console.log(btn.find('span').first().height());
 
 			anchor.css('height', (height + 12) + 'px');
 			anchor.children('span').css('height', (height + 14.4) + 'px');
@@ -410,46 +407,7 @@ $checkboxes.change( function() {
 				}
 			);
 		});
-
-		//$('.button-custom a > span:nth-of-type(1)').each( function(){
-			// const elementHeight = $(this).height();
-			// $(this).parent('a').css('height', elementHeight + 'px');
-			// $(this).css('height', (elementHeight + 14.4) + 'px');
-			// $(this).parent(2).hover(
-			// 	function(){
-			// 		$(this).find('span').css('transform', 'translateY(-'+ (elementHeight + 14.4) +'px)');
-			// 	},
-			// 	function(){
-			// 		$(this).find('span').css('transform', 'translateY(0');
-			// 	}
-			// );
-			//console.log(elementHeight);
-		//});
 	}
-	
-
- // When was this added?
- 	// $(document).on('click', function (e) {
- 	// 	var tag = $(this);
- 	// 	var exceptions = ['todayToggle','todayLink','todayTxt','today-options', 'arrow'];
- 	// 	var elementId = e.target.id;
-  //   //console.log(e);
- 	// 	var is_open = false;
- 	// 	if( elementId=='today-options' ) {
- 	// 		$(".topinfo .today").addClass("open");
- 	// 	} else {
- 	// 		if($.inArray(elementId, exceptions) != -1) {
-	// 			if( $(".topinfo .today").hasClass("open") ) {
-	// 				$(".topinfo .today").removeClass("open");
-	// 			} else {
-	// 				$(".topinfo .today").addClass("open");
-	// 			}
-	//  		} else {
-	//  			$(".topinfo .today").removeClass("open");
-	//  		}
- 	// 	}
-	// });
-	
 
 	// $('a[href*="#"]:not([href="#"])').click(function() {
     // var headHeight = $("#masthead").height();
@@ -486,14 +444,6 @@ $checkboxes.change( function() {
 		});
 	}
 
-	$('#playYoutube').on('click', function(ev) {
-		$(this).hide();
-		$(".videoIframeDiv").addClass('play_video');
-    $(".videoIframe")[0].src += "&autoplay=1";
-    $("#banner").addClass("video-playing");
-    ev.preventDefault();
-  });
-
   $('.select-single').select2();
 
 	/*
@@ -505,7 +455,6 @@ $checkboxes.change( function() {
 
 	$('.js-blocks').matchHeight();
 	$('.js-title').matchHeight();
-
 
 	$(document).on("click","#toggleMenu",function(){
 		$(this).toggleClass('open');
@@ -540,7 +489,6 @@ $checkboxes.change( function() {
 
 		});
 	}
-
 
 	// if( $("select.js-select").length>0 ) {
 	// 	$("select.js-select").each(function(){
